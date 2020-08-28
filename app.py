@@ -9,9 +9,16 @@ import dash_html_components as html
 
 color_palette_blue_2 = ['#636EFA','#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#636EFA', '#1F1F25', '#636EFA']
 
+#df = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Loans%20Breakdown.csv', sep = ';',encoding='ISO-8859-9')
 
-
-df = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Loans%20Breakdown.csv', sep = ';',encoding='ISO-8859-9')
+df= [
+    ['2018-12',1.5],
+    ['2019-01',2.5],
+    ['2019-02',3.5],
+    ['2019-03',4.5],
+    ['2019-04',5.5]
+    ]
+df = pd.DataFrame(df, columns = ['Ay', 'NPL'])
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
