@@ -8,6 +8,7 @@ import plotly.express as px
 import pyautogui
 
 
+
 screenwidth, screenheight = pyautogui.size()
 screenwidthfactor = screenwidth / 1920
 screenheightfactor = screenheight / 1080
