@@ -1,5 +1,4 @@
 import pandas as pd
-import app
 import dash
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
