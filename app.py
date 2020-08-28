@@ -12,15 +12,6 @@ color_palette_blue_2 = ['#636EFA','#636EFA', '#636EFA', '#636EFA', '#636EFA', '#
 
 
 df = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Loans%20Breakdown.csv', sep = ';',encoding='ISO-8859-9')
-coordinates = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Enlem-Boylam.csv', sep = ';', encoding='ISO-8859-9')
-
-
-coordinates = df.merge(coordinates,on='Şehir',how='left')
-coordinates = coordinates[['Şehir','Lattitude','Longitude']]
-coordinates.drop_duplicates(subset ="Şehir", keep = "first", inplace = True) 
-
-
-
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -30,19 +21,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 
 
-
-sube_list = df.sort_values(by=['Şube'], ascending = True)
-# integer column names converted to string column names in order to eliminate Key Error
-df.columns = df.columns.astype(str)
-df_3 = df[df['Bölge'] == 'Ege']
-sube_list_3 = df_3.sort_values(by=['Şube'], ascending = True)
-df_4 = df[df['Şube'] == 'Kadıköy']
-df_5 = df[df['Kredi Türü'] == 'Kredi Kartı']
-df_6 = df[df['Tahsilat Ofisi'] == 'Tahsilat Ofisi-1']
-
-
-
-df_2 = df_3
+df_2 = df
 
 df_2_ay_NPL = df_2.groupby(['Ay'])['NPL'].sum(),df_2.groupby(['Ay'])['NPL'].count()
 df_2_ay_NPL= pd.DataFrame(list( df_2_ay_NPL))
