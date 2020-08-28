@@ -5,21 +5,21 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
 import plotly.express as px
-import pyautogui
+#import pyautogui
 
 
 
-screenwidth, screenheight = pyautogui.size()
-screenwidthfactor = screenwidth / 1920
-screenheightfactor = screenheight / 1080
-screenfactor = min(screenwidthfactor, screenheightfactor)
-if screenheightfactor < 1:
-    fontfactor = 0.9
-elif screenheightfactor <1.1:
-    fontfactor = screenheightfactor
-else:
-    fontfactor = 1.1
-
+#screenwidth, screenheight = pyautogui.size()
+#screenwidthfactor = screenwidth / 1920
+#screenheightfactor = screenheight / 1080
+#screenfactor = min(screenwidthfactor, screenheightfactor)
+#if screenheightfactor < 1:
+#    fontfactor = 0.9
+#elif screenheightfactor <1.1:
+#    fontfactor = screenheightfactor
+#else:
+#    fontfactor = 1.1
+screenfactor=1
 
 
 color_palette_blue = ['#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25']
