@@ -5,21 +5,21 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
 import plotly.express as px
-#import pyautogui
+import pyautogui
 
 
 
-#screenwidth, screenheight = pyautogui.size()
-#screenwidthfactor = screenwidth / 1920
-#screenheightfactor = screenheight / 1080
-#screenfactor = min(screenwidthfactor, screenheightfactor)
-#if screenheightfactor < 1:
-#    fontfactor = 0.9
-#elif screenheightfactor <1.1:
-#    fontfactor = screenheightfactor
-#else:
-#    fontfactor = 1.1
-screenfactor=1
+screenwidth, screenheight = pyautogui.size()
+screenwidthfactor = screenwidth / 1920
+screenheightfactor = screenheight / 1080
+screenfactor = min(screenwidthfactor, screenheightfactor)
+if screenheightfactor < 1:
+    fontfactor = 0.9
+elif screenheightfactor <1.1:
+    fontfactor = screenheightfactor
+else:
+    fontfactor = 1.1
+
 
 
 color_palette_blue = ['#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#50526F', '#1F1F25', '#50526F', '#6D73C1', '#636EFA', '#6D73C1', '#50526F', '#1F1F25']
@@ -2038,13 +2038,13 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
     
     
     #card-output_01_apple
-    return html.H1(last_month_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
-    
+    #return html.H1(last_month_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+    return html.H1(screenwidthfactor, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
     
 
     #card-output_01_orange          
-          ),html.H1(total_NPL, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
-   
+    #      ),html.H1(total_NPL, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+          ),html.H1(screenheightfactor, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
 
                     
     #graph-output_01_apple          
@@ -2928,8 +2928,8 @@ def update_value_2(input_1, input_2, input_3, input_4, input_5):
         
 
         #card-output_02_apple
-        return html.H1(last_month_recovery, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
-        
+        #return html.H1(last_month_recovery, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+        return html.H1(screenfactor, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
         
     
         #card-output_02_orange          
