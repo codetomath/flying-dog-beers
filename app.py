@@ -68,7 +68,6 @@ app.layout = html.Div([
             
             
 
-            
         dcc.Tab(label='Ana Sayfa', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[  
                     
@@ -83,16 +82,16 @@ app.layout = html.Div([
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 100})
               ]),
     html.Div([
-        html.H1('''Kullanıcı Adı :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':0}, className="six columns"),
+        html.H1('''Kullanıcı Adı :''', style={"color": "white", 'textAlign': 'left', 'font-size': '200%', 'margin-left':600}, className="two columns"),
         dcc.Input(id='Username_Input', value='', type='text', placeholder='',  style={'margin-left':10,'margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
               ], className="row"),
     html.Div([
-        html.H1('''Şifre :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
+        html.H1('''Şifre :''', style={"color": "white", 'textAlign': 'left', 'font-size': '200%', 'margin-left':600}, className="two columns"),
         dcc.Input(id='Password_Input', value='', type='password', placeholder='',  style={'margin-left':10,'margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
               ], className="row"),
     html.Div([
-        html.H1('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'left', 'font-size': '200%', 'margin-left':00}, className="six columns"),
-        dcc.Link('Giriş', href='/', refresh = True,loading_state = {'is_loading': True},style={"color": "white", 'font-size': '200%', 'textAlign': 'center', 'margin-left':10})
+        html.H1('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'left', 'font-size': '200%', 'margin-left':600}, className="two columns"),
+        dcc.Link('Giriş', href='/', refresh = True,loading_state = {'is_loading': True},style={"color": "white", 'font-size': '200%', 'textAlign': 'center', 'margin-left':120})
               ], className="row"),            
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 250})
               ]),
@@ -106,7 +105,7 @@ app.layout = html.Div([
             
             
             
-        dcc.Tab(label='İdari Takip', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+        dcc.Tab(label='Profil-1: İdari Takip Yöneticisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
 
                                             
@@ -115,8 +114,8 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''İdari Takip''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
-                                                ], className = 'five columns'),
+                                                    html.H1('''Gecikmedeki Krediler''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                ], className = 'three columns'),
                                     
                                     
   
@@ -131,7 +130,7 @@ app.layout = html.Div([
                                                              placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white'}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 150}),                        
                                      
                                     
   
@@ -147,7 +146,7 @@ app.layout = html.Div([
                                                              placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white'}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
                                     
                                     
   
@@ -162,10 +161,41 @@ app.layout = html.Div([
                                                              placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white'}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
                                      
                                     
+                                    
+  
 
+                                  
+                                    
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Şube_Filtresi',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Şube Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                     
+                                     
+                                    
+                                    
+  
+
+                                  
+                                    
+                                                html.Div([html.I('Ay    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Ay_Filtresi',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Ay Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="one column", style={'font-family': "Calibri" , 'font-size': '90%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                     
                                              
             
                         
@@ -176,42 +206,34 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
                                                                 html.Div([html.Div(id='card-output_01_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
-                                                                html.Div([html.Div(id='card-output_01_orange')])
-                                                                
-                                                ], className="four columns"),
+                                                                html.Div([html.H1('Son 12 Ay NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.Div(id='card-output_01_orange')]),
+                                                                html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+
+                                                ], className="three columns"),
                                             
-                                             html.Div([ 
-                                                                 html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                            ], className="six columns"),  
                                             
-                                    ], className="row", style = {'margin-top': 20}),
-                        
-                        # ROW-3
-                        html.Div([                  
-                                            
+                                            html.Div([                                               
                                             
                                                                 html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
                                                                 html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                  ], className="row", style = {'margin-top': 20}),                                 
-                        
-        
+                                                ], className="five columns"),                                            
 
-                    # ROW-4
-                    html.Div([ 
-                                            
+
+
+                                            html.Div([                                               
                                             
                                                                 html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
                                                                 html.Div(id='graph-output_01_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-
+                                                ], className="four columns"),  
                                             
                                             
                                     ], className="row", style = {'margin-top': 20}),                       
 
 
-                        # ROW-5
+                        # ROW-3
                          html.Div([
                         html.Div(
                                     [
@@ -225,12 +247,12 @@ app.layout = html.Div([
                             
                             
 
-                        # ROW-6
+                        # ROW-4
                         html.Div([                            
                             
                         
                                             html.Div([                                                
-                                                                html.Div(id='graph-output_01_apricot_1', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_01_apricot_1', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"),        
                                             
                                             html.Div([                                                
@@ -248,29 +270,25 @@ app.layout = html.Div([
                                              html.Div([                                                
                                                                 html.Div(id='graph-output_01_apricot_5', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-120%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"),
-                                        
+                                             
+                                            html.Div([                                               
+                                            
+                                                                html.Div(id='graph-output_01_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-130%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                                html.Div(id='graph-output_01_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-130%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                ], className="two columns"),                                               
+                                             
+                                             
                                              
                                              
                                     ], className="row", style = {'margin-top': 0}), 
     
-    
-                    # ROW-7
-                    html.Div([ 
-                                            
-                                            
-                                                                html.Div(id='graph-output_01_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                html.Div(id='graph-output_01_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-
-                                            
-                                            
-                                    ], className="row", style = {'margin-top': 20}),      
     
     
     
     
     
     ]),
-                dcc.Tab(label='Yasal Takip', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-2: Yasal Takip Yöneticisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 
                         children=[
                     
@@ -672,7 +690,7 @@ app.layout = html.Div([
                  
                                 
                 
-                dcc.Tab(label='Bölge', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-3: Bölge Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -845,7 +863,7 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Şube Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-4: Şube Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
         
  
@@ -1003,7 +1021,185 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Tahsilat Ofisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-5: Ürün Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                children=[
+                    
+                    
+                    
+                    
+                                                           # ROW-1
+    
+                        html.Div([
+                                    html.Div(
+                                                [
+                                                    html.H1('''Kredi Kartı''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                ], className = 'four columns'),
+                                    
+                                    
+
+
+
+
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Şube_Filtresi_tab5',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Şube Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 130}),                        
+                                     
+             
+
+
+
+
+
+
+                                                html.Div([html.I('Bölge    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Bölge_Filtresi_tab5',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_5['Bölge'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Bölge Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                    
+                                    
+  
+
+                                  
+                                    
+                                                 html.Div([html.I('Segment    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Segment_Filtresi_tab5',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_5['Segment'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Segment Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                     
+                                                     
+                                    
+
+                                    
+
+
+                                  
+                                    
+                                                html.Div([html.I('Ay    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Ay_Filtresi_tab5',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_5['Ay'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Ay Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                     
+                                             
+            
+                        
+                        ], className="row", style = {'background': '#5D6D7E'}),
+
+
+                        # ROW-2
+                        html.Div([
+
+                                            html.Div([          
+                                                                html.Div([html.H1('Son 12 Ay NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.Div(id='card-output_05_apple')]),
+                                                                html.Div([html.H1('Son 12 Ay NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.Div(id='card-output_05_orange')]),
+                                                                html.Div(id='graph-output_05_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+
+                                                ], className="three columns"),
+                                            
+                                            
+                                            html.Div([                                               
+                                            
+                                                                html.Div(id='graph-output_05_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                                html.Div(id='graph-output_05_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                ], className="five columns"),                                            
+
+
+
+                                            html.Div([                                               
+                                            
+                                                                html.Div(id='graph-output_05_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                                html.Div(id='graph-output_05_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                ], className="four columns"),  
+                                            
+                                            
+                                    ], className="row", style = {'margin-top': 20}),                       
+
+
+                        # ROW-3
+                         html.Div([
+                        html.Div(
+                                    [
+                                        html.Span('''Roll Rate Gelişimi''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':500 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px'})
+
+                                        
+                                        
+                                        ],className="four columns"
+                                )
+                        ],className="row"),
+                            
+ 
+
+
+                           
+
+                        # ROW-4
+                        html.Div([                            
+                            
+                        
+                                            html.Div([                                                
+                                                                html.Div(id='graph-output_05_apricot_1', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                ], className="two columns"),        
+                                            
+                                            html.Div([                                                
+                                                                html.Div(id='graph-output_05_apricot_2', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-30%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                ], className="two columns"), 
+                                            
+                                            html.Div([                                                
+                                                                html.Div(id='graph-output_05_apricot_3', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-60%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                ], className="two columns"), 
+                                            
+                                             html.Div([                                                
+                                                                html.Div(id='graph-output_05_apricot_4', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-90%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                ], className="two columns"),       
+                                            
+                                             html.Div([                                                
+                                                                html.Div(id='graph-output_05_apricot_5', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-120%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                ], className="two columns"),
+                                             
+                                            html.Div([                                               
+                                            
+                                                                html.Div(id='graph-output_05_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-130%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                                html.Div(id='graph-output_05_coconut', style={'display': 'inline-block', 'margin-top': '10%', 'margin-left': '-130%', 'margin-right': '0%', 'margin-bottom': '0%'})
+                                                ], className="two columns"),                                               
+                                             
+                                             
+                                             
+                                             
+                                    ], className="row", style = {'margin-top': 0}),    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+    ]),
+                dcc.Tab(label='Profil-6: Tahsilat Ofisi Yöneticisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -1177,11 +1373,13 @@ app.layout = html.Div([
 @app.callback([Output('card-output_01_apple', 'children'),Output('card-output_01_orange', 'children'),Output('graph-output_01_apple', 'children'),Output('graph-output_01_orange', 'children'),Output('graph-output_01_banana', 'children'),Output('graph-output_01_lemon', 'children'),Output('graph-output_01_cherry', 'children'),Output('graph-output_01_apricot_1', 'children'),Output('graph-output_01_apricot_2', 'children'),Output('graph-output_01_apricot_3', 'children'),Output('graph-output_01_apricot_4', 'children'),Output('graph-output_01_apricot_5', 'children'),Output('graph-output_01_mango', 'children'),Output('graph-output_01_coconut', 'children')],
               [Input('Bölge_Filtresi', 'value'),
               Input('Kredi Türü_Filtresi', 'value'),
-              Input('Segment_Filtresi', 'value')
+              Input('Segment_Filtresi', 'value'),
+              Input('Şube_Filtresi', 'value'),
+              Input('Ay_Filtresi', 'value')
                ]) 
 
 
-def update_value(input_1, input_2, input_3):  
+def update_value(input_1, input_2, input_3, input_4, input_5):  
     
     df_2 = df
 
@@ -1209,6 +1407,20 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
+    # AY FİLTRESİ    
+    if input_5 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Ay'] == input_5]
 
 
 
@@ -1243,6 +1455,12 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
 
 
     total_NPL = round(sum(df_2['NPL']),1)
@@ -1268,6 +1486,19 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
+    # AY FİLTRESİ    
+    if input_5 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Ay'] == input_5]
 
     
     df_2_kredi_türü = df_2.groupby(['Kredi Türü'])['NPL'].sum(),df_2.groupby(['Kredi Türü'])['NPL'].count()
@@ -1307,6 +1538,13 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+ 
+
 
     df_2_ay_NPL = df_2.groupby(['Ay'])['NPL'].sum(),df_2.groupby(['Ay'])['NPL'].count()
     df_2_ay_NPL= pd.DataFrame(list( df_2_ay_NPL))
@@ -1345,6 +1583,15 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
+
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
     df_2_ay_PL = df_2.groupby(['Ay'])['Total Loans'].sum(),df_2.groupby(['Ay'])['Total Loans'].count()
     df_2_ay_PL= pd.DataFrame(list( df_2_ay_PL))
@@ -1374,6 +1621,13 @@ def update_value(input_1, input_2, input_3):
     else :
         df_2 = df_2[df_2['Segment'] == input_3]  
 
+
+
+    # AY FİLTRESİ    
+    if input_5 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Ay'] == input_5]    
 
     
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1414,6 +1668,13 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+
+
+    # AY FİLTRESİ    
+    if input_5 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Ay'] == input_5]    
 
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1457,6 +1718,13 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
 
 
     df_2_roll_rate_1 = df_2.groupby(['Ay'])['Gecikmesiz'].sum(),df_2.groupby(['Ay'])['Bucket-1'].sum()
@@ -1498,6 +1766,11 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
 
@@ -1539,6 +1812,14 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
 
     df_2_roll_rate_3 = df_2.groupby(['Ay'])['Bucket-2'].sum(),df_2.groupby(['Ay'])['Bucket-3'].sum()
     df_2_roll_rate_3 = pd.DataFrame(list( df_2_roll_rate_3))
@@ -1575,6 +1856,14 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2
     else :
         df_2 = df_2[df_2['Segment'] == input_3]  
+
+
+
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
 
@@ -1618,6 +1907,15 @@ def update_value(input_1, input_2, input_3):
 
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
+
     df_2_roll_rate_5 = df_2.groupby(['Ay'])['Gecikmesiz'].sum(),df_2.groupby(['Ay'])['NPL'].sum()
     df_2_roll_rate_5 = pd.DataFrame(list( df_2_roll_rate_5))
     df_2_roll_rate_5.reset_index(drop=True, inplace=True)
@@ -1646,6 +1944,21 @@ def update_value(input_1, input_2, input_3):
     else :
         df_2 = df_2[df_2['Segment'] == input_3]  
 
+
+
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
+    # AY FİLTRESİ    
+    if input_5 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Ay'] == input_5]    
 
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1679,6 +1992,20 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Kredi Türü'] == input_2]  
 
 
+
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+
+
+
+    # AY FİLTRESİ    
+    if input_5 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Ay'] == input_5]
         
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1710,25 +2037,67 @@ def update_value(input_1, input_2, input_3):
     #graph-output_01_apple          
 
    ),dcc.Graph(                    
-             
+        figure = px.area(
+                            df_2_kredi_türü, 
+                            x="Kredi Türü", 
+                            y="NPL",  
+                            title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
+                            height = 175,
+                            width = 475,
+                            text = 'NPL'
+                            ).update_layout(
+                                    title = {'pad':{'l':65}},
+                                    paper_bgcolor = 'rgba(0,0,0,0)',
+                                    plot_bgcolor = 'rgba(0,0,0,0)',
+                                    margin={"r":40,"t":40,"l":90,"b":70},
+                                    yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
+                                    xaxis = {'title': None,'showgrid' : False}
+                                    ).update_traces(
+                                                    #hovertemplate = df_2_kredi_türü["Kredi Türü"]+ ' : ' + df_2_kredi_türü["NPL"],
+                                                    textposition ='top center',
+                                                    cliponaxis = False,
+                                                    line_color = color_palette_blue[0]
+                                                    )                    
+                    
+#   ),dcc.Graph(
+#                        figure={
+#                                    'data': [
+#                                                {'x': (df_2_kredi_türü['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_türü['NPL'].values.tolist()), 'type': 'scatter', 'name': df_2_kredi_türü['Kredi Türü'].values.tolist(),'mode': 'lines+markers+text', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_türü['NPL'],'textposition':'top center', 'textfont':{'color':color_palette_blue[3]}, 'cliponaxis': False, 'hoverinfo' : 'x+text'}
+#                                            ],
+#                                    'layout':   {
+#                                                    'height' : 200,
+#                                                    'width' : 400,
+#                                                    'title': ' Kredi Türü Bazında NPL Aktarımları (M TL)', 
+#                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+#                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+#                                                    'font': {'color': '#5D6D7E'},
+#                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+#                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_türü['Kredi Türü'], 'ticktext': df_2_kredi_türü['Kredi Türü']},
+#                                                    'margin' : {'l': 90,'r': 40,'t': 40,'b': 70},
+#                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+#                                                }
+#                                }
 
-                        figure={
-                                    'data': [
-                                                {'x': (df_2_kredi_türü['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_türü['NPL'].values.tolist()), 'type': 'bar', 'name': df_2_kredi_türü['Kredi Türü'].values.tolist(), 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_türü['NPL'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
-                                            ],
-                                    'layout':   {
-                                                    'height' : 225,
-                                                    #'width' : 400,
-                                                    'title': ' Kredi Türü Bazında NPL Aktarımları (M TL)', 
-                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
-                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
-                                                    'font': {'color': '#5D6D7E'},
-                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_türü['Kredi Türü'], 'ticktext': df_2_kredi_türü['Kredi Türü']},
-                                                    'margin' : {'l': 90,'r': 40,'t': 40,'b': 70},
-                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
-                                                }
-                                }
+
+      
+#    ),dcc.Graph(
+#                        figure={
+#                                    'data': [
+#                                                {'x': (df_2_kredi_türü['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_türü['NPL'].values.tolist()), 'type': 'bar', 'name': df_2_kredi_türü['Kredi Türü'].values.tolist(), 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_türü['NPL'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
+#                                            ],
+#                                    'layout':   {
+#                                                    'height' : 200,
+#                                                    'width' : 400,
+#                                                    'title': ' Kredi Türü Bazında NPL Aktarımları (M TL)', 
+#                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+#                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+#                                                    'font': {'color': '#5D6D7E'},
+#                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+#                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_türü['Kredi Türü'], 'ticktext': df_2_kredi_türü['Kredi Türü']},
+#                                                    'margin' : {'l': 90,'r': 40,'t': 40,'b': 70},
+#                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+#                                                }
+#                                }
 
 
 
@@ -1748,7 +2117,7 @@ def update_value(input_1, input_2, input_3):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    #'width' : 800,
+                                                    'width' : 800,
                                                     'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -1770,7 +2139,7 @@ def update_value(input_1, input_2, input_3):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    #'width' : 800,
+                                                    'width' : 800,
                                                     'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -1792,14 +2161,14 @@ def update_value(input_1, input_2, input_3):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    #'width' : 575,
+                                                    'width' : 575,
                                                     'title': ' Bölge Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_bölge_nplpct['Bölge'], 'ticktext': df_2_bölge_nplpct['Bölge']},
-                                                    'margin' : {'l': 30,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                     
                                                 }
@@ -1815,7 +2184,7 @@ def update_value(input_1, input_2, input_3):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    #'width' : 575,
+                                                    'width' : 575,
                                                     'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -1947,14 +2316,14 @@ def update_value(input_1, input_2, input_3):
                                             ],
                                     'layout':   {
                                                     'height' : 225,
-                                                    #'width' : 575,
+                                                    'width' : 575,
                                                     'title': ' Kredi Türü Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredituru_nplpct['Kredi Türü'], 'ticktext': df_2_kredituru_nplpct['Kredi Türü']},
-                                                    'margin' : {'l': 20,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -1969,7 +2338,7 @@ def update_value(input_1, input_2, input_3):
                                             ],
                                     'layout':   {
                                                     'height' : 225,
-                                                    #'width' : 575,
+                                                    'width' : 575,
                                                     'title': ' Segment Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
