@@ -223,23 +223,41 @@ app.layout = html.Div([
                         html.Div([                  
                                             
                                             
-                                                                html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                                html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'})
                                   ], className="row", style = {'margin-top': 20}),                                 
                         
+        
+                        
+                        # ROW-3
+                        html.Div([                  
+                                            
+                                            
+                                                                
+                                                                html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                  ], className="row", style = {'margin-top': 20}),  
+                        
+                        
+                        
+                    # ROW-4
+                    html.Div([ 
+                                            
+                                            
+                                                                html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                                                
+                                            
+                                            
+                                    ], className="row", style = {'margin-top': 20}),                       
         
 
                     # ROW-4
                     html.Div([ 
                                             
                                             
-                                                                html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
                                                                 html.Div(id='graph-output_01_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
 
                                             
                                             
-                                    ], className="row", style = {'margin-top': 20}),                       
-
+                                    ], className="row", style = {'margin-top': 20}),    
 
                         # ROW-5
                          html.Div([
@@ -2130,7 +2148,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 800,
+                                                    'width' : 1150,
                                                     'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2152,7 +2170,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 800,
+                                                    'width' : 1150,
                                                     'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2174,7 +2192,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 575,
+                                                    'width' : 1150,
                                                     'title': ' Bölge Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2197,7 +2215,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 575,
+                                                    'width' : 1150,
                                                     'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2329,7 +2347,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 225,
-                                                    'width' : 575,
+                                                    'width' : 1150,
                                                     'title': ' Kredi Türü Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2351,7 +2369,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 225,
-                                                    'width' : 575,
+                                                    'width' : 1150,
                                                     'title': ' Segment Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
