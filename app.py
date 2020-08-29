@@ -105,7 +105,7 @@ app.layout = html.Div([
             
             
             
-        dcc.Tab(label='Profil-1: İdari Takip Yöneticisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+        dcc.Tab(label='Profil-1: İdari Takip', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
 
                                             
@@ -281,7 +281,7 @@ app.layout = html.Div([
     
     
     ]),
-                dcc.Tab(label='Profil-2: Yasal Takip Yöneticisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-2: Yasal Takip', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 
                         children=[
                     
@@ -683,7 +683,7 @@ app.layout = html.Div([
                  
                                 
                 
-                dcc.Tab(label='Profil-3: Bölge Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Bölge', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -856,7 +856,7 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Profil-4: Şube Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Şube', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
         
  
@@ -1014,7 +1014,7 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Profil-5: Ürün Müdürü', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Ürün', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -1192,7 +1192,7 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Profil-6: Tahsilat Ofisi Yöneticisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Tahsilat Ofisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
