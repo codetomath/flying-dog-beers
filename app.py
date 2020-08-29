@@ -2074,7 +2074,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                             y="NPL",  
                             title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
                             height = 175,
-                            width = 475,
+                            #width = 475,
                             text = 'NPL'
                             ).update_layout(
                                     title = {'pad':{'l':65}},
@@ -2148,7 +2148,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 1150,
+                                                    #'width' : 600,
                                                     'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2170,7 +2170,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 1150,
+                                                    #'width' : 600,
                                                     'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2192,7 +2192,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 1150,
+                                                    #'width' : 600,
                                                     'title': ' Bölge Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2215,7 +2215,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 175,
-                                                    'width' : 1150,
+                                                    #'width' : 600,
                                                     'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2347,7 +2347,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 225,
-                                                    'width' : 1150,
+                                                    #'width' : 600,
                                                     'title': ' Kredi Türü Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -2369,7 +2369,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                             ],
                                     'layout':   {
                                                     'height' : 225,
-                                                    'width' : 1150,
+                                                    #'width' : 600,
                                                     'title': ' Segment Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
