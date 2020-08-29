@@ -201,63 +201,33 @@ app.layout = html.Div([
                         
                         ], className="row", style = {'background': '#5D6D7E'}),
 
-
-                        # ROW-2
-                        html.Div([
+                        
+                        html.Div([ 
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
                                                                 html.Div([html.Div(id='card-output_01_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
                                                                 html.Div([html.Div(id='card-output_01_orange')])
                                                                 
-                                                ], className="four columns"),
+                                                ], className="six columns"),
                                             
-                                             html.Div([ 
-                                                                 html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                            ], className="six columns"),  
-                                            
-                                    ], className="row", style = {'margin-top': 20}),
-                        
-                        # ROW-3
-                        html.Div([                  
-                                            
-                                            
-                                                                html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'})
-                                  ], className="row", style = {'margin-top': 20}),                                 
-                        
-        
-                        
-                        # ROW-3
-                        html.Div([                  
-                                            
-                                            
-                                                                
-                                                                html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                  ], className="row", style = {'margin-top': 20}),  
-                        
-                        
-                        
-                    # ROW-4
-                    html.Div([ 
-                                            
-                                            
-                                                                html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                
-                                            
-                                            
-                                    ], className="row", style = {'margin-top': 20}),                       
-        
+                                            html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
-                    # ROW-4
-                    html.Div([ 
+                        ], className="row", style = {'margin-top': 0}), 
+
+
+                                            html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
                                             
+                                            html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
                                             
-                                                                html.Div(id='graph-output_01_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                            html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                                                
+                                            html.Div(id='graph-output_01_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
                                             
-                                            
-                                    ], className="row", style = {'margin-top': 20}),    
+                                     
+    
 
                         # ROW-5
                          html.Div([
@@ -301,21 +271,13 @@ app.layout = html.Div([
                                              
                                     ], className="row", style = {'margin-top': 0}), 
     
-    
-                    # ROW-7
-                    html.Div([ 
                                             
+                                            html.Div(id='graph-output_01_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
                                             
-                                                                html.Div(id='graph-output_01_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                html.Div(id='graph-output_01_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
+                                            html.Div(id='graph-output_01_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
                                             
-                                            
-                                    ], className="row", style = {'margin-top': 20}),      
-    
-    
-    
-    
+                                       
     
     
     ]),
@@ -2056,12 +2018,12 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
     
     
     #card-output_01_apple
-    return html.H1(last_month_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+    return html.H1(last_month_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'95%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '5%'}
     
     
 
     #card-output_01_orange          
-          ),html.H1(total_NPL, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+          ),html.H1(total_NPL, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'95%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '5%'}                              
    
 
                     
@@ -2073,7 +2035,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                             x="Kredi Türü", 
                             y="NPL",  
                             title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
-                            height = 175,
+                            height = 225,
                             #width = 475,
                             text = 'NPL'
                             ).update_layout(
@@ -2155,7 +2117,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_ay_NPL['Ay'], 'ticktext': df_2_ay_NPL['Ay']},
-                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 40,'r': 00,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -2177,7 +2139,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_ay_PL['Ay'], 'ticktext': df_2_ay_PL['Ay']},
-                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 40,'r': 00,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
