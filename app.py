@@ -164,6 +164,19 @@ app.layout = html.Div([
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
+                                    
+                                    
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                          dcc.Dropdown(id = 'Şube_Filtresi',
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             value= 'All',
+                                                             multi=False,
+                                                             placeholder='Şube Seçiniz',
+                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
+                                                             )
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
+                                     
+   
                                          
             
                         
@@ -1046,11 +1059,12 @@ app.layout = html.Div([
 @app.callback([Output('card-output_01_apple', 'children'),Output('card-output_01_orange', 'children'),Output('graph-output_01_apple', 'children'),Output('graph-output_01_orange', 'children'),Output('graph-output_01_banana', 'children'),Output('graph-output_01_lemon', 'children'),Output('graph-output_01_cherry', 'children'),Output('graph-output_01_apricot_1', 'children'),Output('graph-output_01_apricot_2', 'children'),Output('graph-output_01_apricot_3', 'children'),Output('graph-output_01_apricot_4', 'children'),Output('graph-output_01_apricot_5', 'children'),Output('graph-output_01_mango', 'children'),Output('graph-output_01_coconut', 'children')],
               [Input('Bölge_Filtresi', 'value'),
               Input('Kredi Türü_Filtresi', 'value'),
-              Input('Segment_Filtresi', 'value')
+              Input('Segment_Filtresi', 'value'),
+              Input('Şube_Filtresi', 'value'),
                ]) 
 
 
-def update_value(input_1, input_2, input_3):  
+def update_value(input_1, input_2, input_3, input_4):  
     
     df_2 = df
 
@@ -1078,7 +1092,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     last_month_NPL = df_2[df_2['Ay_2'] == max(df_2['Ay_2'])]
@@ -1111,7 +1129,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     total_NPL = round(sum(df_2['NPL']),1)
@@ -1136,6 +1158,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     
@@ -1175,7 +1202,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     df_2_ay_NPL = df_2.groupby(['Ay'])['NPL'].sum(),df_2.groupby(['Ay'])['NPL'].count()
@@ -1214,7 +1245,12 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+        
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
     df_2_ay_PL = df_2.groupby(['Ay'])['Total Loans'].sum(),df_2.groupby(['Ay'])['Total Loans'].count()
@@ -1330,6 +1366,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     df_2_roll_rate_1 = df_2.groupby(['Ay'])['Gecikmesiz'].sum(),df_2.groupby(['Ay'])['Bucket-1'].sum()
@@ -1370,6 +1411,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     df_2_roll_rate_2 = df_2.groupby(['Ay'])['Bucket-1'].sum(),df_2.groupby(['Ay'])['Bucket-2'].sum()
@@ -1408,6 +1454,13 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+        
+        
 
     df_2_roll_rate_3 = df_2.groupby(['Ay'])['Bucket-2'].sum(),df_2.groupby(['Ay'])['Bucket-3'].sum()
     df_2_roll_rate_3 = pd.DataFrame(list( df_2_roll_rate_3))
@@ -1446,7 +1499,12 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+        
 
     df_2_roll_rate_4 = df_2.groupby(['Ay'])['Bucket-3'].sum(),df_2.groupby(['Ay'])['NPL'].sum()
     df_2_roll_rate_4 = pd.DataFrame(list( df_2_roll_rate_4))
@@ -1485,7 +1543,12 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
+        
 
     df_2_roll_rate_5 = df_2.groupby(['Ay'])['Gecikmesiz'].sum(),df_2.groupby(['Ay'])['NPL'].sum()
     df_2_roll_rate_5 = pd.DataFrame(list( df_2_roll_rate_5))
@@ -1516,6 +1579,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1549,6 +1617,11 @@ def update_value(input_1, input_2, input_3):
         df_2 = df_2[df_2['Kredi Türü'] == input_2]  
 
 
+    # ŞUBE FİLTRESİ    
+    if input_4 == 'All':
+        df_2 = df_2
+    else :
+        df_2 = df_2[df_2['Şube'] == input_4] 
  
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
