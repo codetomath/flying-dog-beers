@@ -115,7 +115,7 @@ app.layout = html.Div([
                                     html.Div(
                                                 [
                                                     html.H1('''Gecikmedeki Krediler''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
-                                                ], className = 'three columns'),
+                                                ], className = 'five columns'),
                                     
                                     
   
@@ -130,7 +130,7 @@ app.layout = html.Div([
                                                              placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 150}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
   
@@ -146,7 +146,7 @@ app.layout = html.Div([
                                                              placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                     
                                     
   
@@ -161,42 +161,10 @@ app.layout = html.Div([
                                                              placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
-                                    
-  
-
-                                  
-                                    
-                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
-                                                          dcc.Dropdown(id = 'Şube_Filtresi',
-                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
-                                                             value= 'All',
-                                                             multi=False,
-                                                             placeholder='Şube Seçiniz',
-                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
-                                                             )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
-                                     
-                                     
-                                    
-                                    
-  
-
-                                  
-                                    
-                                                html.Div([html.I('Ay    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
-                                                          dcc.Dropdown(id = 'Ay_Filtresi',
-                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
-                                                             value= 'All',
-                                                             multi=False,
-                                                             placeholder='Ay Seçiniz',
-                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
-                                                             )
-                                            ], className="one column", style={'font-family': "Calibri" , 'font-size': '90%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
-                                     
-                                             
+                                         
             
                         
                         ], className="row", style = {'background': '#5D6D7E'}),
@@ -1078,13 +1046,11 @@ app.layout = html.Div([
 @app.callback([Output('card-output_01_apple', 'children'),Output('card-output_01_orange', 'children'),Output('graph-output_01_apple', 'children'),Output('graph-output_01_orange', 'children'),Output('graph-output_01_banana', 'children'),Output('graph-output_01_lemon', 'children'),Output('graph-output_01_cherry', 'children'),Output('graph-output_01_apricot_1', 'children'),Output('graph-output_01_apricot_2', 'children'),Output('graph-output_01_apricot_3', 'children'),Output('graph-output_01_apricot_4', 'children'),Output('graph-output_01_apricot_5', 'children'),Output('graph-output_01_mango', 'children'),Output('graph-output_01_coconut', 'children')],
               [Input('Bölge_Filtresi', 'value'),
               Input('Kredi Türü_Filtresi', 'value'),
-              Input('Segment_Filtresi', 'value'),
-              Input('Şube_Filtresi', 'value'),
-              Input('Ay_Filtresi', 'value')
+              Input('Segment_Filtresi', 'value')
                ]) 
 
 
-def update_value(input_1, input_2, input_3, input_4, input_5):  
+def update_value(input_1, input_2, input_3):  
     
     df_2 = df
 
@@ -1112,20 +1078,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]
 
 
 
@@ -1160,12 +1112,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
 
 
     total_NPL = round(sum(df_2['NPL']),1)
@@ -1191,19 +1137,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]
 
     
     df_2_kredi_türü = df_2.groupby(['Kredi Türü'])['NPL'].sum(),df_2.groupby(['Kredi Türü'])['NPL'].count()
@@ -1243,12 +1176,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
- 
 
 
     df_2_ay_NPL = df_2.groupby(['Ay'])['NPL'].sum(),df_2.groupby(['Ay'])['NPL'].count()
@@ -1288,14 +1215,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
     df_2_ay_PL = df_2.groupby(['Ay'])['Total Loans'].sum(),df_2.groupby(['Ay'])['Total Loans'].count()
@@ -1327,12 +1246,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]    
 
     
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1375,11 +1288,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]    
 
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1423,14 +1331,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
 
     df_2_roll_rate_1 = df_2.groupby(['Ay'])['Gecikmesiz'].sum(),df_2.groupby(['Ay'])['Bucket-1'].sum()
     df_2_roll_rate_1 = pd.DataFrame(list( df_2_roll_rate_1))
@@ -1468,14 +1368,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
         df_2 = df_2
     else :
         df_2 = df_2[df_2['Segment'] == input_3]  
-
-
-
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
 
@@ -1517,15 +1409,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
-
     df_2_roll_rate_3 = df_2.groupby(['Ay'])['Bucket-2'].sum(),df_2.groupby(['Ay'])['Bucket-3'].sum()
     df_2_roll_rate_3 = pd.DataFrame(list( df_2_roll_rate_3))
     df_2_roll_rate_3.reset_index(drop=True, inplace=True)
@@ -1561,15 +1444,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
         df_2 = df_2
     else :
         df_2 = df_2[df_2['Segment'] == input_3]  
-
-
-
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
 
 
 
@@ -1612,14 +1486,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
 
 
 
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
 
     df_2_roll_rate_5 = df_2.groupby(['Ay'])['Gecikmesiz'].sum(),df_2.groupby(['Ay'])['NPL'].sum()
     df_2_roll_rate_5 = pd.DataFrame(list( df_2_roll_rate_5))
@@ -1650,20 +1516,6 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
         df_2 = df_2[df_2['Segment'] == input_3]  
 
 
-
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]    
 
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
@@ -1697,21 +1549,7 @@ def update_value(input_1, input_2, input_3, input_4, input_5):
         df_2 = df_2[df_2['Kredi Türü'] == input_2]  
 
 
-
-    # ŞUBE FİLTRESİ    
-    if input_4 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
-
-
-
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]
-        
+ 
 
     df_2['Total Loans'] = df_2['Gecikmesiz'] + df_2['Bucket-1'] + df_2['Bucket-2'] + df_2['Bucket-3']
     df_2_segment_nplpct = df_2.groupby(['Segment'])['Total Loans'].sum(),df_2.groupby(['Segment'])['NPL'].sum()
