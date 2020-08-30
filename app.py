@@ -186,25 +186,25 @@ app.layout = html.Div([
                         html.Div([ 
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '2%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_01_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_01_orange')])
                                                                 
                                                 ], className="four columns"),
                                             
-                                            html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '2%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="eight columns"),
+                                            html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
-                        ], className="row", style = {'margin-top': 0}), 
+                        ], className="row", style = {'margin-top': '1%'}), 
 
 
-                                            html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_01_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                                             
-                                            html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_01_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
                                             
-                                            html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_01_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                                                                 
-                                            html.Div(id='graph-output_01_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_01_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
                                             
                                      
@@ -255,7 +255,7 @@ app.layout = html.Div([
                                             
                                             html.Div(id='graph-output_01_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
                                             
-                                            html.Div(id='graph-output_01_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_01_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="four columns"),
 
                                             
                                        
@@ -357,7 +357,7 @@ app.layout = html.Div([
                                                                 html.Div(id='graph-output_02_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'},className="seven columns"),
                                          
 
-                                                ], className="row", style = {'margin-top': 0}),
+                                                ], className="row", style = {'margin-top': '1%'}),
 
                                                                                   
                                           
@@ -373,7 +373,7 @@ app.layout = html.Div([
                                             html.Div(id='graph-output_02_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
 
-                                            html.Div(id='graph-output_02_apricot', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns")        
+                                            html.Div(id='graph-output_02_apricot', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="four columns")        
                     
                     
                     
@@ -1578,98 +1578,51 @@ def update_value(input_1, input_2, input_3, input_4):
     
     
     #card-output_01_apple
-    return html.H1(last_month_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'95%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '5%'}
+    return html.H1(last_month_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
     
     
 
     #card-output_01_orange          
-          ),html.H1(total_NPL, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'95%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '5%'}                              
+          ),html.H1(total_NPL, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
    
 
                     
     #graph-output_01_apple          
 
    ),dcc.Graph(                    
-        figure = px.area(
-                            df_2_kredi_türü, 
-                            x="Kredi Türü", 
-                            y="NPL",  
-                            title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
-                            height = 225,
-                            #width = 475,
-                            text = 'NPL'
-                            ).update_layout(
-                                    title = {'pad':{'l':65}},
-                                    paper_bgcolor = 'rgba(0,0,0,0)',
-                                    plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":90,"b":70},
-                                    yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
-                                    xaxis = {'title': None,'showgrid' : False}
-                                    ).update_traces(
-                                                    #hovertemplate = df_2_kredi_türü["Kredi Türü"]+ ' : ' + df_2_kredi_türü["NPL"],
-                                                    textposition ='top center',
-                                                    cliponaxis = False,
-                                                    line_color = color_palette_blue[0]
-                                                    )                    
+                
                     
-#   ),dcc.Graph(
-#                        figure={
-#                                    'data': [
-#                                                {'x': (df_2_kredi_türü['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_türü['NPL'].values.tolist()), 'type': 'scatter', 'name': df_2_kredi_türü['Kredi Türü'].values.tolist(),'mode': 'lines+markers+text', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_türü['NPL'],'textposition':'top center', 'textfont':{'color':color_palette_blue[3]}, 'cliponaxis': False, 'hoverinfo' : 'x+text'}
-#                                            ],
-#                                    'layout':   {
-#                                                    'height' : 200,
-#                                                    'width' : 400,
-#                                                    'title': ' Kredi Türü Bazında NPL Aktarımları (M TL)', 
-#                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
-#                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
-#                                                    'font': {'color': '#5D6D7E'},
-#                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-#                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_türü['Kredi Türü'], 'ticktext': df_2_kredi_türü['Kredi Türü']},
-#                                                    'margin' : {'l': 90,'r': 40,'t': 40,'b': 70},
-#                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
-#                                                }
-#                                }
-
-
-      
-#    ),dcc.Graph(
-#                        figure={
-#                                    'data': [
-#                                                {'x': (df_2_kredi_türü['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_türü['NPL'].values.tolist()), 'type': 'bar', 'name': df_2_kredi_türü['Kredi Türü'].values.tolist(), 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_türü['NPL'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
-#                                            ],
-#                                    'layout':   {
-#                                                    'height' : 200,
-#                                                    'width' : 400,
-#                                                    'title': ' Kredi Türü Bazında NPL Aktarımları (M TL)', 
-#                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
-#                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
-#                                                    'font': {'color': '#5D6D7E'},
-#                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-#                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_türü['Kredi Türü'], 'ticktext': df_2_kredi_türü['Kredi Türü']},
-#                                                    'margin' : {'l': 90,'r': 40,'t': 40,'b': 70},
-#                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
-#                                                }
-#                                }
-
-
-
-
-
-
-
-
-
+                        figure={
+                                    'data': [
+                                                {'x': (df_2_bölge_nplpct['Bölge'].values.tolist()), 'y': (df_2_bölge_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_bölge_nplpct['Bölge'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10},'text' : df_2_bölge_nplpct['NPL Aktarım %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text','cliponaxis': False}
+                                            ],
+                                    'layout':   {
+                                                    'height' : 225,
+                                                    #'width' : 600,
+                                                    'title': ' Bölge Bazında Aylık NPL Dönüşüm Oranı', 
+                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+                                                    'font': {'color': '#5D6D7E'},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_bölge_nplpct['Bölge'], 'ticktext': df_2_bölge_nplpct['Bölge']},
+                                                    'margin' : {'l': 0,'r': 40,'t': 40,'b': 70},
+                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+                                                    
+                                                }
+                                }
  
               
     #graph-output_01_orange
     ),dcc.Graph(
+
+
+
                         figure={
                                     'data': [
                                                 {'x': (df_2_ay_NPL['Ay'].values.tolist()), 'y': (df_2_ay_NPL['NPL'].values.tolist()), 'type': 'bar', 'name': df_2_ay_NPL['Ay'].values.tolist(), 'marker' : {'color': color_palette_blue_2},'text' : df_2_ay_NPL['NPL'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
                                             ],
                                     'layout':   {
-                                                    'height' : 175,
+                                                    'height' : 225,
                                                     #'width' : 600,
                                                     'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -1681,17 +1634,39 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
-
- 
               
     #graph-output_01_banana
     ),dcc.Graph(
+
+                        figure={
+                                    'data': [
+                                                {'x': (df_2_sube_nplpct['Şube'].values.tolist()), 'y': (df_2_sube_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_sube_nplpct['Şube'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10[0]},'text' : df_2_sube_nplpct['NPL Aktarım %'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
+                                            ],
+                                    'layout':   {
+                                                    'height' : 225,
+                                                    #'width' : 600,
+                                                    'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
+                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+                                                    'font': {'color': '#5D6D7E'},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_sube_nplpct['Şube'], 'ticktext': df_2_sube_nplpct['Şube']},
+                                                    'margin' : {'l': 0,'r': 40,'t': 40,'b': 70},
+                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+                                                }
+                                } 
+ 
+              
+    #graph-output_01_lemon
+    ),dcc.Graph(
+
+
                         figure={
                                     'data': [
                                                 {'x': (df_2_ay_PL['Ay'].values.tolist()), 'y': (df_2_ay_PL['Total Loans'].values.tolist()), 'type': 'bar', 'name': df_2_ay_PL['Ay'].values.tolist(), 'marker' : {'color': color_palette_blue_2},'text' : df_2_ay_PL['Total Loans'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
                                             ],
                                     'layout':   {
-                                                    'height' : 175,
+                                                    'height' : 225,
                                                     #'width' : 600,
                                                     'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -1702,55 +1677,35 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'margin' : {'l': 40,'r': 00,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
-                                }
-
- 
-              
-    #graph-output_01_lemon
-    ),dcc.Graph(
-                        figure={
-                                    'data': [
-                                                {'x': (df_2_bölge_nplpct['Bölge'].values.tolist()), 'y': (df_2_bölge_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_bölge_nplpct['Bölge'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10},'text' : df_2_bölge_nplpct['NPL Aktarım %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text','cliponaxis': False}
-                                            ],
-                                    'layout':   {
-                                                    'height' : 175,
-                                                    #'width' : 600,
-                                                    'title': ' Bölge Bazında Aylık NPL Dönüşüm Oranı', 
-                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
-                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
-                                                    'font': {'color': '#5D6D7E'},
-                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_bölge_nplpct['Bölge'], 'ticktext': df_2_bölge_nplpct['Bölge']},
-                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
-                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
-                                                    
-                                                }
-                                }
-
- 
+                                } 
               
     #graph-output_01_cherry
     ),dcc.Graph(
-                        figure={
-                                    'data': [
-                                                {'x': (df_2_sube_nplpct['Şube'].values.tolist()), 'y': (df_2_sube_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_sube_nplpct['Şube'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10[0]},'text' : df_2_sube_nplpct['NPL Aktarım %'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
-                                            ],
-                                    'layout':   {
-                                                    'height' : 175,
-                                                    #'width' : 600,
-                                                    'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
-                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
-                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
-                                                    'font': {'color': '#5D6D7E'},
-                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_sube_nplpct['Şube'], 'ticktext': df_2_sube_nplpct['Şube']},
-                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
-                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
-                                                }
-                                }
+
 
  
-              
+        figure = px.area(
+                            df_2_kredi_türü, 
+                            x="Kredi Türü", 
+                            y="NPL",  
+                            title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
+                            height = 225,
+                            #width = 475,
+                            text = 'NPL'
+                            ).update_layout(
+                                    #title = {'pad':{'l':65}},
+                                    paper_bgcolor = 'rgba(0,0,0,0)',
+                                    plot_bgcolor = 'rgba(0,0,0,0)',
+                                    margin={"r":40,"t":40,"l":0,"b":70},
+                                    yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
+                                    xaxis = {'title': None,'showgrid' : False}
+                                    ).update_traces(
+                                                    #hovertemplate = df_2_kredi_türü["Kredi Türü"]+ ' : ' + df_2_kredi_türü["NPL"],
+                                                    textposition ='top center',
+                                                    cliponaxis = False,
+                                                    line_color = color_palette_blue[0]
+                                                    )  
+                                        
     #graph-output_01_apricot_1
     ),dcc.Graph(
                         figure={
@@ -1868,7 +1823,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_kredituru_nplpct['Kredi Türü'].values.tolist()), 'y': (df_2_kredituru_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_kredituru_nplpct['Kredi Türü'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_6},'text' : df_2_kredituru_nplpct['NPL Aktarım %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text','cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 225,
+                                                    'height' : 275,
                                                     #'width' : 600,
                                                     'title': ' Kredi Türü Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -1876,7 +1831,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredituru_nplpct['Kredi Türü'], 'ticktext': df_2_kredituru_nplpct['Kredi Türü']},
-                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -1890,7 +1845,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_segment_nplpct['Segment'].values.tolist()), 'y': (df_2_segment_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_segment_nplpct['Segment'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_3},'text' : df_2_segment_nplpct['NPL Aktarım %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text','cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 225,
+                                                    'height' : 275,
                                                     #'width' : 600,
                                                     'title': ' Segment Bazında Aylık NPL Dönüşüm Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -2449,31 +2404,6 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                 }                
                 
                 
-              
-
-#                figure={
-#                            'data': [
-#                                                {'x': recovery_vintage_all['Ay'].values.tolist(), 'y': recovery_vintage_all['Tahsilat%'].values.tolist(), 'type': 'scatter',  'line': {'dash': 'dash'},'mode': 'lines+markers+text','marker' : {'color': color_palette_blue[0] },'text' : recovery_vintage_all['Tahsilat%%'].values.tolist(),'textposition':'top center', 'cliponaxis': False, 'hoverinfo': 'x+text'},
-#                                            ],
-#                            'layout':   {
-#                                            'height' : 300,
-#                                            #'max-height' : 275,
-#                                            'width' : 600,
-#                                            #'bargap' : 0.8,
-#                                            #'overflowY': 'scroll',
-#                                            'title': 'NPL Tahsilat Vintage Eğrisi',
-#                                            'plot_bgcolor': 'rgba(0,0,0,0)' ,
-#                                            'paper_bgcolor': 'rgba(0,0,0,0)',
-#                                            'font': {'color': '#5D6D7E'},
-#                                            'xaxis': {'title':'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : True, 'showticklabels' : True,'range': [0,12]},
-#                                            'yaxis': {'title':'NPL Tahsilat (%)','showgrid' : False, 'showline' : True, 'showticklabels' : True, 'tickformat': ',.0%','range': [0,1.2*max(recovery_vintage_all['Tahsilat%'])]},
-#                                            'margin' : {'l':90,'r': 40,'t': 40,'b': 40}
-#                                        }
-#                        }
-
-
-
-
 
 
 
@@ -2490,7 +2420,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_segment_recovery_12_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_segment_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
-                                                    'height' : 325,
+                                                    'height' : 275,
                                                     #'width' : 1100,
                                                     'title': ' Segment Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -2512,7 +2442,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                             x="Ay", 
                             y="Tahsilat%",  
                             title=" NPL Tahsilat Vintage Eğrisi", 
-                            height = 325,
+                            height = 275,
                             #width = 600,
                             text = 'Tahsilat%%'
                             ).update_layout(
@@ -2541,7 +2471,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_kredi_turu_recovery_12_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
-                                                    'height' : 325,
+                                                    'height' : 275,
                                                     #'width' : 1850,
                                                     'title': ' Kredi Türü Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -2561,7 +2491,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                                 {'x': (sube_recovery_pct['Şube'].values.tolist()), 'y': (sube_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': sube_recovery_pct['Şube'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10[9]},'text' : sube_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 250,
+                                                    'height' : 275,
                                                     #'width' : 365,
                                                     'title': {'text':' Şube Bazında 12. Ay NPL Tahsilat Oranı (İlk 5 Şube)','pad':{'l':200}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -2583,7 +2513,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                                 {'x': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'y': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 250,
+                                                    'height' : 275,
                                                     #'width' : 375,
                                                     'title': {'text':' Tahsilat Ofisi Bazında' '12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
