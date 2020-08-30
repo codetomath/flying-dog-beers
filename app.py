@@ -186,14 +186,14 @@ app.layout = html.Div([
                         html.Div([ 
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '2%', 'margin-left': '0%'})]),  
                                                                 html.Div([html.Div(id='card-output_01_apple')]),
                                                                 html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'100%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
                                                                 html.Div([html.Div(id='card-output_01_orange')])
                                                                 
                                                 ], className="six columns"),
                                             
-                                            html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_01_apple', style={'display': 'inline-block', 'margin-top': '2%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
                         ], className="row", style = {'margin-top': 0}), 
 
@@ -233,19 +233,19 @@ app.layout = html.Div([
                                                 ], className="two columns"),        
                                             
                                             html.Div([                                                
-                                                                html.Div(id='graph-output_01_apricot_2', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_01_apricot_2', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"), 
                                             
                                             html.Div([                                                
-                                                                html.Div(id='graph-output_01_apricot_3', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_01_apricot_3', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"), 
                                             
                                              html.Div([                                                
-                                                                html.Div(id='graph-output_01_apricot_4', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_01_apricot_4', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"),       
                                             
                                              html.Div([                                                
-                                                                html.Div(id='graph-output_01_apricot_5', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_01_apricot_5', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"),
                                         
                                              
