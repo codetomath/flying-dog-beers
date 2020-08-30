@@ -82,16 +82,16 @@ app.layout = html.Div([
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 100})
               ]),
     html.Div([
-        html.H1('''Kullanıcı Adı :''', style={"color": "white", 'textAlign': 'left', 'font-size': '200%', 'margin-left':600}, className="two columns"),
-        dcc.Input(id='Username_Input', value='', type='text', placeholder='',  style={'margin-left':10,'margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
+        html.H1('''Kullanıcı Adı :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
+        dcc.Input(id='Username_Input', value='', type='text', placeholder='',  style={'margin-left':'1%','margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
               ], className="row"),
     html.Div([
-        html.H1('''Şifre :''', style={"color": "white", 'textAlign': 'left', 'font-size': '200%', 'margin-left':600}, className="two columns"),
-        dcc.Input(id='Password_Input', value='', type='password', placeholder='',  style={'margin-left':10,'margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
+        html.H1('''Şifre :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
+        dcc.Input(id='Password_Input', value='', type='password', placeholder='',  style={'margin-left':'1%','margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
               ], className="row"),
     html.Div([
-        html.H1('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'left', 'font-size': '200%', 'margin-left':600}, className="two columns"),
-        dcc.Link('Giriş', href='/', refresh = True,loading_state = {'is_loading': True},style={"color": "white", 'font-size': '200%', 'textAlign': 'center', 'margin-left':120})
+        html.H1('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'left', 'font-size': '200%', 'margin-left':00}, className="six columns"),
+        dcc.Link('Giriş', href='/', refresh = True,loading_state = {'is_loading': True},style={"color": "white", 'font-size': '200%', 'textAlign': 'center', 'margin-left':'1%'})
               ], className="row"),            
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 250})
               ]),
