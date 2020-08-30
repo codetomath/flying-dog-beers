@@ -390,7 +390,7 @@ app.layout = html.Div([
                                     html.Div(
                                                 [
                                                     html.H1('''Sorunlu Kredilerin Yönetimi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
-                                                ], className = 'three columns'),
+                                                ], className = 'five columns'),
                                     
                                     
   
@@ -405,7 +405,7 @@ app.layout = html.Div([
                                                              placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 150}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
   
@@ -421,7 +421,7 @@ app.layout = html.Div([
                                                              placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left':'1%'}),                        
                                     
                                     
   
@@ -436,7 +436,7 @@ app.layout = html.Div([
                                                              placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
                                     
@@ -446,31 +446,15 @@ app.layout = html.Div([
                                     
                                                 html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Şube_Filtresi_tab7',
-                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Şube'].unique()], 
                                                              value= 'All',
                                                              multi=False,
                                                              placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
-                                     
-                                    
-                                    
-  
-
-                                  
-                                    
-                                                html.Div([html.I('Ay    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
-                                                          dcc.Dropdown(id = 'Ay_Filtresi_tab7',
-                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
-                                                             value= 'All',
-                                                             multi=False,
-                                                             placeholder='Ay Seçiniz',
-                                                             style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
-                                                             )
-                                            ], className="one column", style={'font-family': "Calibri" , 'font-size': '90%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
-                                     
+                                                    
                                              
             
                         
@@ -2541,12 +2525,11 @@ def update_value_2(input_1, input_2, input_3, input_4):
               [Input('Bölge_Filtresi_tab7', 'value'),
               Input('Kredi Türü_Filtresi_tab7', 'value'),
               Input('Segment_Filtresi_tab7', 'value'),
-              Input('Şube_Filtresi_tab7', 'value'),
-              Input('Ay_Filtresi_tab7', 'value')
+              Input('Şube_Filtresi_tab7', 'value')
                ])
 
 
-def update_value_table_1(input_1, input_2, input_3, input_4, input_5):  
+def update_value_table_1(input_1, input_2, input_3, input_4):  
     
     df_2 = df
 
@@ -2579,17 +2562,10 @@ def update_value_table_1(input_1, input_2, input_3, input_4, input_5):
     if input_4 == 'All':
         df_2 = df_2
     else :
-        df_2 = df_2[df_2['Şube'] == input_4] 
+        df_2 = df_2[df_2['Şube'] == input_2] 
 
 
 
-    # AY FİLTRESİ    
-    if input_5 == 'All':
-        df_2 = df_2
-    else :
-        df_2 = df_2[df_2['Ay'] == input_5]                
-                
-   
     
 
 
