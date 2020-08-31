@@ -722,7 +722,7 @@ app.layout = html.Div([
 
                                                 ], className="four columns"),
                                             
-                                                                html.Div(id='graph-output_04_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                                                html.Div(id='graph-output_04_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%', 'width':'45%'}, className="six columns"),
                                                                 
                                                                 
                                     ], className="row", style = {'margin-top': '1%'}),                                                                 
@@ -730,11 +730,11 @@ app.layout = html.Div([
                                                                 
                                                                 html.Div(id='graph-output_04_orange', style={'display': 'inline-block', 'margin-top': '1%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                         
-                                                                html.Div(id='graph-output_04_banana', style={'display': 'inline-block', 'margin-top': '1%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),                                        
+                                                                html.Div(id='graph-output_04_banana', style={'display': 'inline-block', 'margin-top': '1%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),                                        
                                                                                        
                                                                 html.Div(id='graph-output_04_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
 
-                                                                html.Div(id='graph-output_04_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                                                html.Div(id='graph-output_04_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
  
                                             
                                             
@@ -788,7 +788,7 @@ app.layout = html.Div([
                         
                                             html.Div(id='graph-output_04_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                                             
-                                            html.Div(id='graph-output_04_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                            html.Div(id='graph-output_04_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
                        
                 
                     
