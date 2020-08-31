@@ -68,7 +68,7 @@ app.layout = html.Div([
             
             
 
-        dcc.Tab(label='Ana Sayfa', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+        dcc.Tab(label='Login', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[  
                     
                     
@@ -105,7 +105,7 @@ app.layout = html.Div([
             
             
             
-        dcc.Tab(label='İdari Takip', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+        dcc.Tab(label='Profil-1', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
 
                                             
@@ -262,7 +262,7 @@ app.layout = html.Div([
     
     
     ]),
-                dcc.Tab(label='Yasal Takip', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-2', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 
                         children=[
                     
@@ -474,7 +474,7 @@ app.layout = html.Div([
                  
                                 
                 
-                dcc.Tab(label='Bölge', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-3', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -645,7 +645,7 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Şube', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-4', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
         
               
@@ -798,7 +798,7 @@ app.layout = html.Div([
                     
     ]),
 
-                dcc.Tab(label='Tahsilat Ofisi', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-5', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -889,11 +889,11 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_06_apple')]),
-                                                                html.Div([html.H1('Son 12 Ay NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_orange')]),
-                                                                html.Div([html.H1('12. Ay NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_banana')])                                                                
                                                 ], className="four columns"),
                                             
