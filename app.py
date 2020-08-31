@@ -487,7 +487,7 @@ app.layout = html.Div([
                                     html.Div(
                                                 [
                                                     html.H1('''Ege Bölgesi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
-                                                ], className = 'four columns'),
+                                                ], className = 'five columns'),
                                     
                                     
 
@@ -502,7 +502,7 @@ app.layout = html.Div([
                                                              placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 130}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
              
 
@@ -519,7 +519,7 @@ app.layout = html.Div([
                                                              placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                     
                                     
   
@@ -534,7 +534,7 @@ app.layout = html.Div([
                                                              placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                                      
                                     
@@ -552,7 +552,7 @@ app.layout = html.Div([
                                                              placeholder='Ay Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                              
             
@@ -564,42 +564,43 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Son 12 Ay NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_03_apple')]),
-                                                                html.Div([html.H1('Son 12 Ay NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_03_orange')]),
-                                                                html.Div(id='graph-output_03_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
 
-                                                ], className="three columns"),
+                                                ], className="four columns"),
                                             
-                                            
-                                            html.Div([                                               
-                                            
-                                                                html.Div(id='graph-output_03_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                html.Div(id='graph-output_03_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="five columns"),                                            
+                                            html.Div(id='graph-output_03_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
+                                            
+                                    ], className="row", style = {'margin-top': '1%'}),  
 
+                                            
+                                 
+                                            
+                                                                html.Div(id='graph-output_03_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                                                
+                                                                html.Div(id='graph-output_03_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
 
-                                            html.Div([                                               
+                                                                html.Div(id='graph-output_03_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                                                
+                                                                html.Div(id='graph-output_03_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+
                                             
-                                                                html.Div(id='graph-output_03_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                html.Div(id='graph-output_03_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="four columns"),  
                                             
-                                            
-                                    ], className="row", style = {'margin-top': 20}),                       
+                     
 
 
                         # ROW-3
                          html.Div([
                         html.Div(
                                     [
-                                        html.Span('''Roll Rate Gelişimi''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':500 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px'})
+                                        html.Span('''Roll Rate Gelişimi''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
 
                                         
                                         
-                                        ],className="four columns"
+                                        ],className="ten columns"
                                 )
                         ],className="row"),
                             
@@ -617,33 +618,30 @@ app.layout = html.Div([
                                                 ], className="two columns"),        
                                             
                                             html.Div([                                                
-                                                                html.Div(id='graph-output_03_apricot_2', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-30%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_03_apricot_2', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"), 
                                             
                                             html.Div([                                                
-                                                                html.Div(id='graph-output_03_apricot_3', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-60%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_03_apricot_3', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"), 
                                             
                                              html.Div([                                                
-                                                                html.Div(id='graph-output_03_apricot_4', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-90%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_03_apricot_4', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"),       
                                             
                                              html.Div([                                                
-                                                                html.Div(id='graph-output_03_apricot_5', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-120%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
+                                                                html.Div(id='graph-output_03_apricot_5', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}),                                                
                                                 ], className="two columns"),
-                                             
-                                            html.Div([                                               
-                                            
-                                                                html.Div(id='graph-output_03_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '-130%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                                html.Div(id='graph-output_03_coconut', style={'display': 'inline-block', 'margin-top': '10%', 'margin-left': '-130%', 'margin-right': '0%', 'margin-bottom': '0%'})
-                                                ], className="two columns"),                                               
-                                             
-                                             
-                                             
+
                                              
                                     ], className="row", style = {'margin-top': 0}),    
                     
-             
+                    
+
+                                            html.Div(id='graph-output_03_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            
+                                            html.Div(id='graph-output_03_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns")
+ 
                     
                     
     ]),
@@ -3143,12 +3141,12 @@ def update_value_3(input_1, input_2, input_3, input_4):
     
     
     #card-output_03_apple
-    return html.H1(total_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+    return html.H1(total_NPL, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
     
     
 
     #card-output_03_orange          
-          ),html.H1(total_recovery, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+          ),html.H1(total_recovery, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
    
 
                     
@@ -3160,14 +3158,14 @@ def update_value_3(input_1, input_2, input_3, input_4):
                             x="Kredi Türü", 
                             y="NPL",  
                             title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
-                            height = 175,
-                            width = 475,
+                            height = 225,
+                            #width = 475,
                             text = 'NPL'
                             ).update_layout(
                                     title = {'pad':{'l':65}},
                                     paper_bgcolor = 'rgba(0,0,0,0)',
                                     plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":90,"b":70},
+                                    margin={"r":40,"t":40,"l":0,"b":70},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
                                     xaxis = {'title': None,'showgrid' : False}
                                     ).update_traces(
@@ -3186,8 +3184,8 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_ay_NPL['Ay'].values.tolist()), 'y': (df_2_ay_NPL['NPL'].values.tolist()), 'type': 'bar', 'name': df_2_ay_NPL['Ay'].values.tolist(), 'marker' : {'color': color_palette_blue_2},'text' : df_2_ay_NPL['NPL'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
                                             ],
                                     'layout':   {
-                                                    'height' : 175,
-                                                    'width' : 800,
+                                                    'height' : 225,
+                                                    #'width' : 800,
                                                     'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -3208,8 +3206,8 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_ay_PL['Ay'].values.tolist()), 'y': (df_2_ay_PL['Total Loans'].values.tolist()), 'type': 'bar', 'name': df_2_ay_PL['Ay'].values.tolist(), 'marker' : {'color': color_palette_blue_2},'text' : df_2_ay_PL['Total Loans'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
                                             ],
                                     'layout':   {
-                                                    'height' : 175,
-                                                    'width' : 800,
+                                                    'height' : 225,
+                                                    #'width' : 800,
                                                     'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -3230,8 +3228,8 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_sube_nplpct['Şube'].values.tolist()), 'y': (df_2_sube_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_sube_nplpct['Şube'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10},'text' : df_2_sube_nplpct['NPL Aktarım %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 175,
-                                                    'width' : 575,
+                                                    'height' : 225,
+                                                    #'width' : 575,
                                                     'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -3253,8 +3251,8 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                 {'x': (sube_recovery_pct['Şube'].values.tolist()), 'y': (sube_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': sube_recovery_pct['Şube'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10_descending},'text' : sube_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 195,
-                                                    'width' : 575,
+                                                    'height' : 225,
+                                                    #'width' : 575,
                                                     'title': {'text':' Şube Bazında 12. Ay NPL Tahsilat Oranı (İlk 5 Şube)'},
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
@@ -3384,8 +3382,8 @@ def update_value_3(input_1, input_2, input_3, input_4):
                             x="Ay", 
                             y="Tahsilat%",  
                             title=" NPL Tahsilat Vintage Eğrisi", 
-                            height = 250,
-                            width = 575,
+                            height = 225,
+                            #width = 575,
                             text = 'Tahsilat%%'
                             ).update_layout(
                                     title = {'pad':{'l':185}},
@@ -3409,14 +3407,14 @@ def update_value_3(input_1, input_2, input_3, input_4):
                             x="Kredi Türü", 
                             y="Recovery",  
                             title=" Kredi Türü Bazında NPL Tahsilatı (M TL)", 
-                            height = 150,
-                            width = 575,
+                            height = 225,
+                            #width = 575,
                             text = 'Recovery'
                             ).update_layout(
                                     title = {'pad':{'l':65}},
                                     paper_bgcolor = 'rgba(0,0,0,0)',
                                     plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":20,"b":40},
+                                    margin={"r":40,"t":40,"l":0,"b":40},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
                                     xaxis = {'title': None,'showgrid' : False}
                                     ).update_traces(
