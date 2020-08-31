@@ -3201,28 +3201,8 @@ def update_value_3(input_1, input_2, input_3, input_4):
               
     #graph-output_03_banana
     ),dcc.Graph(
-                        figure={
-                                    'data': [
-                                                {'x': (df_2_ay_PL['Ay'].values.tolist()), 'y': (df_2_ay_PL['Total Loans'].values.tolist()), 'type': 'bar', 'name': df_2_ay_PL['Ay'].values.tolist(), 'marker' : {'color': color_palette_blue_2},'text' : df_2_ay_PL['Total Loans'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
-                                            ],
-                                    'layout':   {
-                                                    'height' : 225,
-                                                    #'width' : 800,
-                                                    'title': ' Kredi Plasmanının Gelişimi (M TL)', 
-                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
-                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
-                                                    'font': {'color': '#5D6D7E'},
-                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_ay_PL['Ay'], 'ticktext': df_2_ay_PL['Ay']},
-                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
-                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
-                                                }
-                                }
 
- 
-              
-    #graph-output_03_lemon
-    ),dcc.Graph(
+
                         figure={
                                     'data': [
                                                 {'x': (df_2_sube_nplpct['Şube'].values.tolist()), 'y': (df_2_sube_nplpct['NPL Aktarım %'].values.tolist()), 'type': 'bar', 'name': df_2_sube_nplpct['Şube'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10},'text' : df_2_sube_nplpct['NPL Aktarım %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
@@ -3240,8 +3220,28 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
-
  
+              
+    #graph-output_03_lemon
+    ),dcc.Graph(
+
+                        figure={
+                                    'data': [
+                                                {'x': (df_2_ay_PL['Ay'].values.tolist()), 'y': (df_2_ay_PL['Total Loans'].values.tolist()), 'type': 'bar', 'name': df_2_ay_PL['Ay'].values.tolist(), 'marker' : {'color': color_palette_blue_2},'text' : df_2_ay_PL['Total Loans'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'x+text'}
+                                            ],
+                                    'layout':   {
+                                                    'height' : 225,
+                                                    #'width' : 800,
+                                                    'title': ' Kredi Plasmanının Gelişimi (M TL)', 
+                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+                                                    'font': {'color': '#5D6D7E'},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_ay_PL['Ay'], 'ticktext': df_2_ay_PL['Ay']},
+                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
+                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+                                                }
+                                } 
               
     #graph-output_03_cherry
             ),dcc.Graph(
