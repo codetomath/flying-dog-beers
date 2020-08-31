@@ -389,7 +389,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Sorunlu Kredilerin Yönetimi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Sorunlu Krediler''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -2562,7 +2562,7 @@ def update_value_table_1(input_1, input_2, input_3, input_4):
     if input_4 == 'All':
         df_2 = df_2
     else :
-        df_2 = df_2[df_2['Şube'] == input_2] 
+        df_2 = df_2[df_2['Şube'] == input_4] 
 
 
 
