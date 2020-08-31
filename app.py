@@ -811,7 +811,7 @@ app.layout = html.Div([
                                     html.Div(
                                                 [
                                                     html.H1('''Tahsilat Ofisi-1''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
-                                                ], className = 'four columns'),
+                                                ], className = 'five columns'),
                                     
                                     
   
@@ -826,7 +826,7 @@ app.layout = html.Div([
                                                              placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 100}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
   
@@ -842,7 +842,7 @@ app.layout = html.Div([
                                                              placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                     
                                     
   
@@ -857,7 +857,7 @@ app.layout = html.Div([
                                                              placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                     
                                     
@@ -873,7 +873,7 @@ app.layout = html.Div([
                                                              placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
-                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': 50}),                        
+                                            ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
                                      
                                      
                                    
@@ -889,73 +889,41 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_06_apple')]),
-                                                                html.Div([html.H1('Son 12 Ay NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.H1('Son 12 Ay NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_orange')]),
-                                                                html.Div([html.H1('12. Ay NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'120%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '0%'})]),
+                                                                html.Div([html.H1('12. Ay NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_banana')])                                                                
-                                                ], className="three columns"),
+                                                ], className="four columns"),
                                             
                                             
-                                            html.Div([                                               
-                                            
-                                                                html.Div(id='graph-output_06_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="five columns"),                                            
+                      
+                        
+                                                                html.Div(id='graph-output_06_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="four columns"),
+                                                                
+                                                                html.Div(id='graph-output_06_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%', 'width':'18%'}, className="three columns"),
 
-
-
-                                            html.Div([                                               
-                                            
-                                                                html.Div(id='graph-output_06_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="four columns"),  
                                             
                                             
-                                    ], className="row", style = {'margin-top': 20}),                       
+                                            ], className="row", style = {'margin-top': 20}),               
                     
                     
-                    
-
-                        # ROW-3
-                        html.Div([
-
-
-
-                                            html.Div([                                               
+                                     
                                             
-                                                                html.Div(id='graph-output_06_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="six columns"),  
-                                            
-                                            
-                                            html.Div([                                               
-                                            
-                                                                html.Div(id='graph-output_06_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '40%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="two columns"),                                            
+                                                                html.Div(id='graph-output_06_banana', style={'display': 'inline-block', 'margin-top': '2%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
 
                                             
-                                            
-                                    ], className="row", style = {'margin-top': 20}),    
 
-
-
-
-                        # ROW-4
-                        html.Div([
-
-
-
-                                            html.Div([                                               
-                                            
-                                                                html.Div(id='graph-output_06_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}),
-                                                ], className="twelve columns"),  
-                                            
-
+                                                                html.Div(id='graph-output_06_lemon', style={'display': 'inline-block', 'margin-top': '2%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%', 'width':'45%'}, className="six columns"),
+                                         
                                             
                                             
-                                    ], className="row", style = {'margin-top': 20}),  
-                    
-                    
-       
+                                                                html.Div(id='graph-output_06_cherry', style={'display': 'inline-block', 'margin-top': '0.5%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="eleven columns"),
+
+                                            
+
+
                     
                     
                     ])
@@ -4660,17 +4628,17 @@ def update_value_6(input_1, input_2, input_3, input_4):
         
 
         #card-output_06_apple
-        return html.H1(last_month_recovery, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+        return html.H1(last_month_recovery, style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
         
         
     
         #card-output_06_orange          
-              ),html.H1(total_recovery, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+              ),html.H1(total_recovery, style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
        
 
 
         #card-output_06_banana          
-              ),html.H1(total_recovery_pct, style={"color": "white","background": color_palette_blue[0], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+              ),html.H1(total_recovery_pct, style={"color": "white","background": color_palette_blue[0], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
        
 
             #graph-output_06_apple            
@@ -4683,13 +4651,13 @@ def update_value_6(input_1, input_2, input_3, input_4):
                             y="Tahsilat%",  
                             title=" NPL Tahsilat Vintage Eğrisi", 
                             height = 300,
-                            width = 800,
+                            #width = 800,
                             text = 'Tahsilat%%'
                             ).update_layout(
                                     title = {'pad':{'l':185}},
                                     paper_bgcolor = 'rgba(0,0,0,0)',
                                     plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":90,"b":40},
+                                    margin={"r":40,"t":40,"l":0,"b":40},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
                                     xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
                                     ).update_traces(
@@ -4711,15 +4679,15 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                 {'x': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'y': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 315,
-                                                    'width' : 550,
-                                                    'title': {'text':' Tahsilat Ofisi Bazında' '12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
+                                                    'height' : 300,
+                                                    #'width' : 550,
+                                                    'title': {'text':' Tahsilat Ofisi 12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
-                                                    'margin' : {'l': 150,'r': 100,'t': 60,'b': 70},
+                                                    'margin' : {'l': 0,'r': 0,'t': 40,'b': 40},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -4739,15 +4707,15 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_segment_recovery_12_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_segment_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
-                                                    'height' : 250,
-                                                    'width' : 1100,
+                                                    'height' : 275,
+                                                    #'width' : 1100,
                                                     'title': ' Segment Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_segment_recovery_3_ay_tahsilat['Segment'], 'ticktext': df_2_segment_recovery_3_ay_tahsilat['Segment']},
-                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 0,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -4761,15 +4729,15 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                 {'x': (bolge_recovery_pct['Bölge'].values.tolist()), 'y': (bolge_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': bolge_recovery_pct['Bölge'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_10_descending},'text' : bolge_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
                                             ],
                                     'layout':   {
-                                                    'height' : 250,
-                                                    'width' : 750,
+                                                    'height' : 275,
+                                                    #'width' : 750,
                                                     'title': ' Bölge Bazında 12. Ay NPL Tahsilat Oranı (%)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': bolge_recovery_pct['Bölge'], 'ticktext': bolge_recovery_pct['Bölge']},
-                                                    'margin' : {'l': 100,'r': 0,'t': 40,'b': 70},
+                                                    'margin' : {'l': 0,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -4787,15 +4755,15 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                 {'x': (df_2_kredi_turu_recovery_12_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
-                                                    'height' : 250,
-                                                    'width' : 1850,
+                                                    'height' : 275,
+                                                    #'width' : 1850,
                                                     'title': ' Kredi Türü Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_turu_recovery_3_ay_tahsilat['Kredi Türü'], 'ticktext': df_2_kredi_turu_recovery_3_ay_tahsilat['Kredi Türü']},
-                                                    'margin' : {'l': 80,'r': 0,'t': 40,'b': 70},
+                                                    'margin' : {'l': 0,'r': 0,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
