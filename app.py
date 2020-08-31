@@ -722,19 +722,19 @@ app.layout = html.Div([
 
                                                 ], className="four columns"),
                                             
-                                                                html.Div(id='graph-output_04_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                                                html.Div(id='graph-output_04_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '20%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                                                                 
                                                                 
                                     ], className="row", style = {'margin-top': '1%'}),                                                                 
                                                                 
                                                                 
-                                                                html.Div(id='graph-output_04_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                                                html.Div(id='graph-output_04_orange', style={'display': 'inline-block', 'margin-top': '1%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                         
-                                                                html.Div(id='graph-output_04_banana', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),                                        
+                                                                html.Div(id='graph-output_04_banana', style={'display': 'inline-block', 'margin-top': '1%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),                                        
                                                                                        
                                                                 html.Div(id='graph-output_04_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
 
-                                                                html.Div(id='graph-output_04_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                                                html.Div(id='graph-output_04_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
  
                                             
                                             
@@ -786,9 +786,9 @@ app.layout = html.Div([
                     
                      
                         
-                                            html.Div(id='graph-output_04_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_04_mango', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                                             
-                                            html.Div(id='graph-output_04_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
+                                            html.Div(id='graph-output_04_coconut', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '10%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
                        
                 
                     
@@ -3880,31 +3880,30 @@ def update_value_4(input_1, input_2, input_3):
                     
     #graph-output_04_apple          
 
-   ),dcc.Graph(                    
-        figure = px.area(
-                            df_2_kredi_türü, 
-                            x="Kredi Türü", 
-                            y="NPL",  
-                            title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
+   ),dcc.Graph(                                
+                                                                             
+                             figure = px.area(
+                            recovery_vintage_all, 
+                            x="Ay", 
+                            y="Tahsilat%",  
+                            title=" NPL Tahsilat Vintage Eğrisi", 
                             height = 225,
-                            #width = 475,
-                            text = 'NPL'
+                            #width = 575,
+                            text = 'Tahsilat%%'
                             ).update_layout(
-                                    title = {'pad':{'l':65}},
+                                    title = {'pad':{'l':185}},
                                     paper_bgcolor = 'rgba(0,0,0,0)',
                                     plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":0,"b":70},
-                                    yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
-                                    xaxis = {'title': None,'showgrid' : False}
+                                    margin={"r":40,"t":40,"l":20,"b":40},
+                                    yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
+                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
                                     ).update_traces(
-                                                    #hovertemplate = df_2_kredi_türü["Kredi Türü"]+ ' : ' + df_2_kredi_türü["NPL"],
+                                                    hovertemplate = '%{x}. Ay: %{text}',
                                                     textposition ='top center',
                                                     cliponaxis = False,
                                                     line_color = color_palette_blue[0]
-                                                    )                    
-
- 
-     #ok         
+                                                    ) 
+             
     #graph-output_04_orange
     ),dcc.Graph(
                         figure={
@@ -3930,29 +3929,28 @@ def update_value_4(input_1, input_2, input_3):
     #graph-output_04_banana
     ),dcc.Graph(
 
+  
 
-                            figure = px.area(
-                            kredi_turu_recovery, 
-                            x="Kredi Türü", 
-                            y="Recovery",  
-                            title=" Kredi Türü Bazında NPL Tahsilatı (M TL)", 
-                            height = 225,
-                            #width = 575,
-                            text = 'Recovery'
-                            ).update_layout(
-                                    title = {'pad':{'l':65}},
-                                    paper_bgcolor = 'rgba(0,0,0,0)',
-                                    plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":20,"b":40},
-                                    yaxis = {'title': None,'showgrid' : False, 'showline' : False, 'showticklabels' : False},
-                                    xaxis = {'title': None,'showgrid' : False}
-                                    ).update_traces(
-                                                    #hovertemplate = df_2_kredi_türü["Kredi Türü"]+ ' : ' + df_2_kredi_türü["NPL"],
-                                                    textposition ='top center',
-                                                    cliponaxis = False,
-                                                    line_color = color_palette_blue[0]
-                                                    )   
-              
+                         figure={
+                                    'data': [
+                                                {'x': (kredi_turu_recovery['Kredi Türü'].values.tolist()), 'y': (kredi_turu_recovery['Recovery'].values.tolist()), 'type': 'bar', 'name': kredi_turu_recovery['Kredi Türü'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_6_descending},'text' : kredi_turu_recovery['Recovery'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
+                                            ],
+                                    'layout':   {
+                                                    'height' : 225,
+                                                    #'width' : 575,
+                                                    'title': ' Kredi Türü Bazında NPL Tahsilatı (M TL)', 
+                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+                                                    'font': {'color': '#5D6D7E'},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': kredi_turu_recovery['Kredi Türü'], 'ticktext': kredi_turu_recovery['Kredi Türü']},
+                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
+                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+                                                }
+                                }                                       
+                                        
+                                        
+                                        
     #graph-output_04_lemon
     ),dcc.Graph(
 
@@ -3978,27 +3976,23 @@ def update_value_4(input_1, input_2, input_3):
     ),dcc.Graph(                    
                  
 
-                            figure = px.area(
-                            recovery_vintage_all, 
-                            x="Ay", 
-                            y="Tahsilat%",  
-                            title=" NPL Tahsilat Vintage Eğrisi", 
-                            height = 225,
-                            #width = 575,
-                            text = 'Tahsilat%%'
-                            ).update_layout(
-                                    title = {'pad':{'l':185}},
-                                    paper_bgcolor = 'rgba(0,0,0,0)',
-                                    plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":20,"b":40},
-                                    yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
-                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
-                                    ).update_traces(
-                                                    hovertemplate = '%{x}. Ay: %{text}',
-                                                    textposition ='top center',
-                                                    cliponaxis = False,
-                                                    line_color = color_palette_blue[0]
-                                                    ) 
+                         figure={
+                                    'data': [
+                                                {'x': (df_2_kredi_türü['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_türü['NPL'].values.tolist()), 'type': 'bar', 'name': df_2_kredi_türü['Kredi Türü'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_6},'text' : df_2_kredi_türü['NPL'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
+                                            ],
+                                    'layout':   {
+                                                    'height' : 225,
+                                                    #'width' : 575,
+                                                    'title': ' Kredi Türü Bazında NPL Aktarımı (M TL)', 
+                                                    'plot_bgcolor': 'rgba(0,0,0,0)' ,
+                                                    'paper_bgcolor': 'rgba(0,0,0,0)',
+                                                    'font': {'color': '#5D6D7E'},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredi_türü['Kredi Türü'], 'ticktext': df_2_kredi_türü['Kredi Türü']},
+                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
+                                                    'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
+                                                }
+                                }         
 
     
  
@@ -4128,7 +4122,7 @@ def update_value_4(input_1, input_2, input_3):
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': df_2_kredituru_nplpct['Kredi Türü'], 'ticktext': df_2_kredituru_nplpct['Kredi Türü']},
-                                                    'margin' : {'l': 10,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 40,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
