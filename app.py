@@ -1665,7 +1665,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'font': {'color': '#5D6D7E'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'yaxis': {'showgrid' : False, 'showline' : True, 'showticklabels' : True, 'tickvals': df_2_roll_rate_1['Ay'], 'ticktext': df_2_roll_rate_1['Ay']},
-                                                    'margin' : {'l': 50,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 80,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -1747,7 +1747,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 495,
                                                     'width' : 250,
-                                                    'title': ' Aylık NPL Dönüşüm %', 
+                                                    'title': ' Aylık NPL Aktarım %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3172,7 +3172,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
+                                                    'title': ' Şube Bazında Aylık NPL Aktarım Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3242,7 +3242,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                     'font': {'color': '#5D6D7E'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'yaxis': {'showgrid' : False, 'showline' : True, 'showticklabels' : True, 'tickvals': df_2_roll_rate_1['Ay'], 'ticktext': df_2_roll_rate_1['Ay']},
-                                                    'margin' : {'l': 50,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 80,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -3324,7 +3324,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 495,
                                                     'width' : 250,
-                                                    'title': ' Aylık NPL Dönüşüm %', 
+                                                    'title': ' Aylık NPL Aktarım %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3980,7 +3980,7 @@ def update_value_4(input_1, input_2, input_3):
                                                     'font': {'color': '#5D6D7E'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'yaxis': {'showgrid' : False, 'showline' : True, 'showticklabels' : True, 'tickvals': df_2_roll_rate_1['Ay'], 'ticktext': df_2_roll_rate_1['Ay']},
-                                                    'margin' : {'l': 50,'r': 40,'t': 40,'b': 70},
+                                                    'margin' : {'l': 80,'r': 40,'t': 40,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -4062,7 +4062,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 495,
                                                     'width' : 250,
-                                                    'title': ' Aylık NPL Dönüşüm %', 
+                                                    'title': ' Aylık NPL Aktarım %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4084,7 +4084,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' Kredi Türü Bazında Aylık NPL Dönüşüm Oranı', 
+                                                    'title': ' Kredi Türü Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
