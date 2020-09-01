@@ -186,9 +186,9 @@ app.layout = html.Div([
                         html.Div([ 
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_01_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_01_orange')])
                                                                 
                                                 ], className="four columns"),
@@ -346,9 +346,9 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_02_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_02_orange')]),
                                                                 html.Div([html.H1('12. Ay NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_02_banana')])                                                                
@@ -564,9 +564,9 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_03_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_03_orange')]),
 
                                                 ], className="four columns"),
@@ -714,9 +714,9 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_04_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_04_orange')]),
                                                                 
 
@@ -889,9 +889,9 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Aylık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_06_apple')]),
-                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı (M TL)', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_orange')]),
                                                                 html.Div([html.H1('NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_banana')])                                                                
@@ -1522,12 +1522,12 @@ def update_value(input_1, input_2, input_3, input_4):
     
     
     #card-output_01_apple
-    return html.H1(str(last_month_NPL)+' M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+    return html.H1(str(last_month_NPL)+'  M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
     
     
 
     #card-output_01_orange          
-          ),html.H1(str(total_NPL)+' M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+          ),html.H1(str(total_NPL)+'  M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
    
 
                     
@@ -2311,12 +2311,12 @@ def update_value_2(input_1, input_2, input_3, input_4):
         
 
         #card-output_02_apple
-        return html.H1(str(last_month_recovery)+' M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+        return html.H1(str(last_month_recovery)+'  M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
         
         
     
         #card-output_02_orange          
-              ),html.H1(str(total_recovery)+' M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+              ),html.H1(str(total_recovery)+'  M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
        
 
 
@@ -3103,12 +3103,12 @@ def update_value_3(input_1, input_2, input_3, input_4):
     
     
     #card-output_03_apple
-    return html.H1(str(total_NPL)+' M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+    return html.H1(str(total_NPL)+'  M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
     
     
 
     #card-output_03_orange          
-          ),html.H1(str(total_recovery)+' M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+          ),html.H1(str(total_recovery)+'  M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
    
 
                     
@@ -3837,12 +3837,12 @@ def update_value_4(input_1, input_2, input_3):
     
     
     #card-output_04_apple
-    return html.H1(str(total_NPL)+' M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+    return html.H1(str(total_NPL)+'  M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
     
     
 
     #card-output_43_orange          
-          ),html.H1(str(total_recovery)+' M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+          ),html.H1(str(total_recovery)+'  M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
    
 
                     
@@ -4629,12 +4629,12 @@ def update_value_6(input_1, input_2, input_3, input_4):
         
 
         #card-output_06_apple
-        return html.H1(str(last_month_recovery)+' M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+        return html.H1(str(last_month_recovery)+'  M TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
         
         
     
         #card-output_06_orange          
-              ),html.H1(str(total_recovery)+' M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+              ),html.H1(str(total_recovery)+'  M TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
        
 
 
