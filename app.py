@@ -2443,7 +2443,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': sube_recovery_pct['Şube'], 'ticktext': sube_recovery_pct['Şube']},
-                                                    'margin' : {'l': 40,'r': 40,'t': 60,'b': 70},
+                                                    'margin' : {'l': 40,'r': 60,'t': 60,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
@@ -2454,17 +2454,17 @@ def update_value_2(input_1, input_2, input_3, input_4):
                         
                         figure={
                                     'data': [
-                                                {'x': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'y': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
+                                                {'y': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'x': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'y+text', 'cliponaxis': False, 'orientation' : 'h'}
                                             ],
                                     'layout':   {
-                                                    'height' : 275,
+                                                    'height' : 250,
                                                     #'width' : 375,
                                                     'title': {'text':' Tahsilat Ofisi Bazında' '12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
-                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
                                                     'margin' : {'l': 100,'r': 100,'t': 60,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
@@ -4680,7 +4680,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                 {'y': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'x': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'y+text', 'cliponaxis': False, 'orientation':'h'}
                                             ],
                                     'layout':   {
-                                                    'height' : 300,
+                                                    'height' : 250,
                                                     #'width' : 550,
                                                     'title': {'text':' Tahsilat Ofisi 12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
@@ -4688,7 +4688,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                     'font': {'color': '#5D6D7E'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'range' : 'auto'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
-                                                    'margin' : {'l': 105,'r': 20,'t': 40,'b': 40},
+                                                    'margin' : {'l': 105,'r': 20,'t': 100,'b': 40},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
