@@ -114,7 +114,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Gecikmedeki Krediler''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''İdari Takip Yöneticisi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -272,7 +272,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Takipteki Krediler''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Yasal Takip Yöneticisi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -486,7 +486,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Ege Bölgesi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Bölge Müdürü''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -654,7 +654,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Kadıköy Şubesi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Şube Müdürü''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'six columns'),
                                     
                                     
@@ -810,7 +810,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Tahsilat Ofisi-1''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Tahsilat Ofisi Yöneticisi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -900,9 +900,9 @@ app.layout = html.Div([
                                             
                       
                         
-                                                                html.Div(id='graph-output_06_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="four columns"),
+                                                                #html.Div(id='graph-output_06_apple', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="four columns"),
                                                                 
-                                                                html.Div(id='graph-output_06_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '2%', 'margin-right': '0%', 'margin-bottom': '0%', 'width':'18%'}, className="three columns"),
+                                                                html.Div(id='graph-output_06_orange', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '12%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
 
                                             
                                             
@@ -1543,7 +1543,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 600,
-                                                    'title': ' Bölge Bazında Aylık NPL Dönüşüm Oranı', 
+                                                    'title': ' Bölge Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1589,7 +1589,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 600,
-                                                    'title': ' Şube Bazında Aylık NPL Dönüşüm Oranı (İlk 5 Şube)', 
+                                                    'title': ' Şube Bazında Aylık NPL Aktarım Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1769,7 +1769,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 600,
-                                                    'title': ' Kredi Türü Bazında Aylık NPL Dönüşüm Oranı', 
+                                                    'title': ' Kredi Türü Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1791,7 +1791,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 600,
-                                                    'title': ' Segment Bazında Aylık NPL Dönüşüm Oranı', 
+                                                    'title': ' Segment Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4130,7 +4130,8 @@ def update_value_4(input_1, input_2, input_3):
 
         
 #tab-6 callback begins here
-@app.callback([Output('card-output_06_apple', 'children'),Output('card-output_06_orange', 'children'),Output('card-output_06_banana', 'children'),Output('graph-output_06_apple', 'children'),Output('graph-output_06_orange', 'children'),Output('graph-output_06_banana', 'children'),Output('graph-output_06_lemon', 'children'),Output('graph-output_06_cherry', 'children')],
+@app.callback([Output('card-output_06_apple', 'children'),Output('card-output_06_orange', 'children'),Output('card-output_06_banana', 'children'),Output('graph-output_06_orange', 'children'),Output('graph-output_06_banana', 'children'),Output('graph-output_06_lemon', 'children'),Output('graph-output_06_cherry', 'children')],
+              #Output('card-output_06_apple', 'children'),Output('card-output_06_orange', 'children'),Output('card-output_06_banana', 'children'),Output('graph-output_06_apple', 'children'),Output('graph-output_06_orange', 'children'),Output('graph-output_06_banana', 'children'),Output('graph-output_06_lemon', 'children'),Output('graph-output_06_cherry', 'children')],
               [Input('Bölge_Filtresi_tab6', 'value'),
               Input('Kredi Türü_Filtresi_tab6', 'value'),
               Input('Segment_Filtresi_tab6', 'value'),
@@ -4642,30 +4643,30 @@ def update_value_6(input_1, input_2, input_3, input_4):
        
 
             #graph-output_06_apple            
-            ),dcc.Graph(
-
-                
-                        figure = px.area(
-                            recovery_vintage_all, 
-                            x="Ay", 
-                            y="Tahsilat%",  
-                            title=" NPL Tahsilat Vintage Eğrisi", 
-                            height = 300,
-                            #width = 800,
-                            text = 'Tahsilat%%'
-                            ).update_layout(
-                                    title = {'pad':{'l':185}},
-                                    paper_bgcolor = 'rgba(0,0,0,0)',
-                                    plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":0,"b":40},
-                                    yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
-                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
-                                    ).update_traces(
-                                                    hovertemplate = '%{x}. Ay: %{text}',
-                                                    textposition ='top center',
-                                                    cliponaxis = False,
-                                                    line_color = color_palette_blue[0]
-                                                    )    
+#            ),dcc.Graph(
+#
+#                
+#                        figure = px.area(
+#                            recovery_vintage_all, 
+#                            x="Ay", 
+#                            y="Tahsilat%",  
+#                            title=" NPL Tahsilat Vintage Eğrisi", 
+#                            height = 300,
+#                            #width = 800,
+#                            text = 'Tahsilat%%'
+#                            ).update_layout(
+#                                    title = {'pad':{'l':185}},
+#                                    paper_bgcolor = 'rgba(0,0,0,0)',
+#                                    plot_bgcolor = 'rgba(0,0,0,0)',
+#                                    margin={"r":40,"t":40,"l":0,"b":40},
+#                                    yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
+#                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
+#                                    ).update_traces(
+#                                                    hovertemplate = '%{x}. Ay: %{text}',
+#                                                    textposition ='top center',
+#                                                    cliponaxis = False,
+#                                                    line_color = color_palette_blue[0]
+#                                                    )    
                 
                 
             
@@ -4676,7 +4677,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
             ),dcc.Graph(
                         figure={
                                     'data': [
-                                                {'x': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'y': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'x+text', 'cliponaxis': False}
+                                                {'y': (ofis_recovery_pct['Tahsilat Ofisi'].values.tolist()), 'x': (ofis_recovery_pct['12. Ay NPL Tahsilat %'].values.tolist()), 'type': 'bar', 'name': ofis_recovery_pct['Tahsilat Ofisi'].values.tolist(), 'marker' : {'color': color_palette_heatmap_pale_2_descending},'text' : ofis_recovery_pct['12. Ay NPL Tahsilat %'],'textposition':'outside', 'textfont':{'color':'auto'},'hoverinfo' : 'y+text', 'cliponaxis': False, 'orientation':'h'}
                                             ],
                                     'layout':   {
                                                     'height' : 300,
@@ -4685,9 +4686,9 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
-                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
-                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
-                                                    'margin' : {'l': 0,'r': 0,'t': 40,'b': 40},
+                                                    'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'range' : 'auto'},
+                                                    'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
+                                                    'margin' : {'l': 105,'r': 20,'t': 40,'b': 40},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
