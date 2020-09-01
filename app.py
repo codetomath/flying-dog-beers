@@ -370,10 +370,10 @@ app.layout = html.Div([
                                             html.Div(id='graph-output_02_lemon', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="twelve columns"),
                     
 
-                                            html.Div(id='graph-output_02_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="six columns"),
+                                            html.Div(id='graph-output_02_cherry', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '0%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns"),
 
 
-                                            html.Div(id='graph-output_02_apricot', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="four columns")        
+                                            html.Div(id='graph-output_02_apricot', style={'display': 'inline-block', 'margin-top': '0%', 'margin-left': '5%', 'margin-right': '0%', 'margin-bottom': '0%'}, className="five columns")        
                     
                     
                     
@@ -2393,7 +2393,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                     title = {'pad':{'l':185}},
                                     paper_bgcolor = 'rgba(0,0,0,0)',
                                     plot_bgcolor = 'rgba(0,0,0,0)',
-                                    margin={"r":40,"t":40,"l":90,"b":40},
+                                    margin={"r":40,"t":40,"l":90,"b":70},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
                                     xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
                                     ).update_traces(
@@ -2465,7 +2465,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                                     'font': {'color': '#5D6D7E'},
                                                     'xaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : False, 'range' : 'auto'},
                                                     'yaxis': {'showgrid' : False, 'showline' : False, 'showticklabels' : True, 'tickvals': ofis_recovery_pct['Tahsilat Ofisi'], 'ticktext': ofis_recovery_pct['Tahsilat Ofisi']},
-                                                    'margin' : {'l': 100,'r': 100,'t': 60,'b': 70},
+                                                    'margin' : {'l': 105,'r': 20,'t': 60,'b': 70},
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
