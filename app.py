@@ -1554,7 +1554,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     
                                                 }
                                 }
- 
+ ,config={
+        'displayModeBar': False
+    }
               
     #graph-output_01_orange
     ),dcc.Graph(
@@ -1578,7 +1580,10 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
-              
+  ,config={
+        'displayModeBar': False
+    }
+             
     #graph-output_01_banana
     ),dcc.Graph(
 
@@ -1599,7 +1604,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 } 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     #graph-output_01_lemon
     ),dcc.Graph(
@@ -1622,6 +1629,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 } 
+ ,config={
+        'displayModeBar': False
+    }
               
     #graph-output_01_cherry
     ),dcc.Graph(
@@ -1649,6 +1659,10 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     cliponaxis = False,
                                                     line_color = color_palette_blue[0]
                                                     )  
+
+ ,config={
+        'displayModeBar': False
+    }
                                         
     #graph-output_01_apricot_1
     ),dcc.Graph(
@@ -1670,7 +1684,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 }
                                 }
 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     #graph-output_01_apricot_2
     ),dcc.Graph(
@@ -1692,7 +1708,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 }
                                 }
 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     #graph-output_01_apricot_3
     ),dcc.Graph(
@@ -1714,7 +1732,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 }
                                 }
 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     #graph-output_01_apricot_4
     ),dcc.Graph(
@@ -1736,7 +1756,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 }
                                 }
 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     #graph-output_01_apricot_5
     ),dcc.Graph(
@@ -1758,7 +1780,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 }
                                 }
 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     #graph-output_01_mango
     ),dcc.Graph(
@@ -1779,7 +1803,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                     'legend' : {'x': 1,'y': 0.5,'orientation': 'v', 'itemclick': 'toggleothers'}
                                                 }
                                 }
-
+ ,config={
+        'displayModeBar': False
+    }
  
               
     #graph-output_01_coconut
@@ -1802,7 +1828,9 @@ def update_value(input_1, input_2, input_3, input_4):
                                                 }
                                 }
 
- 
+ ,config={
+        'displayModeBar': False
+    } 
               
     
     )
