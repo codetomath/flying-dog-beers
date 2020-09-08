@@ -3179,7 +3179,9 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                                     line_color = color_palette_blue[0]
                                                     )                    
 
- 
+ ,config={
+        'displayModeBar': False
+    }       
               
     #graph-output_03_orange
     ),dcc.Graph(
