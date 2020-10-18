@@ -28,19 +28,16 @@ color_palette_heatmap_pale_2 =  ['#FB9083', '#90FB83']
 
 
 
-df = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Loans%20Breakdown_EN.csv', sep = ';',encoding='ISO-8859-9')
-#df.to_csv(r'C:/Users/orhan.altan/OneDrive - P.I.Works, Inc/Documents/GitHub/Loans Breakdown.csv', index = False)
-#df.head(10)
-
-
-
-coordinates = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Enlem-Boylam_EN.csv', sep = ';', encoding='ISO-8859-9')
-coordinates = coordinates.rename(columns={'ï»¿Åehir': 'Şehir'})
+df = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Loans%20Breakdown.csv', sep = ';',encoding='ISO-8859-9')
+coordinates = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Enlem-Boylam.csv', sep = ';', encoding='ISO-8859-9')
 
 
 coordinates = df.merge(coordinates,on='Şehir',how='left')
 coordinates = coordinates[['Şehir','Lattitude','Longitude']]
 coordinates.drop_duplicates(subset ="Şehir", keep = "first", inplace = True) 
+
+
+
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -54,11 +51,11 @@ server = app.server
 sube_list = df.sort_values(by=['Şube'], ascending = True)
 # integer column names converted to string column names in order to eliminate Key Error
 df.columns = df.columns.astype(str)
-df_3 = df[df['Bölge'] == 'West']
+df_3 = df[df['Bölge'] == 'Ege']
 sube_list_3 = df_3.sort_values(by=['Şube'], ascending = True)
-df_4 = df[df['Şube'] == 'Rome']
-df_5 = df[df['Kredi Türü'] == 'Credit Cards']
-df_6 = df[df['Tahsilat Ofisi'] == 'Agency-1']
+df_4 = df[df['Şube'] == 'Kadıköy']
+df_5 = df[df['Kredi Türü'] == 'Kredi Kartı']
+df_6 = df[df['Tahsilat Ofisi'] == 'Tahsilat Ofisi-1']
 
 
 
@@ -80,21 +77,21 @@ app.layout = html.Div([
     
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 350})
               ]),
-    html.Div([html.H1('''Distressed Loans Overview''', style={"color": "white", 'textAlign': 'center', 'font-size': '500%' })
+    html.Div([html.H1('''Sorunlu Kredilerin Yönetimi''', style={"color": "white", 'textAlign': 'center', 'font-size': '500%' })
               ]),
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 100})
               ]),
     html.Div([
-        html.H1('''Username :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
+        html.H1('''Kullanıcı Adı :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
         dcc.Input(id='Username_Input', value='', type='text', placeholder='',  style={'margin-left':'1%','margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
               ], className="row"),
     html.Div([
-        html.H1('''Password :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
+        html.H1('''Şifre :''', style={"color": "white", 'textAlign': 'right', 'font-size': '200%', 'margin-left':00}, className="six columns"),
         dcc.Input(id='Password_Input', value='', type='password', placeholder='',  style={'margin-left':'1%','margin-top':0, 'background': 'white', 'width': '15%' ,'font-style': 'italic', 'color' : '#99A3A4'}, className="two columns")
               ], className="row"),
     html.Div([
         html.H1('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'left', 'font-size': '200%', 'margin-left':00}, className="six columns"),
-        dcc.Link('Submit', href='/', refresh = True,loading_state = {'is_loading': True},style={"color": "white", 'font-size': '200%', 'textAlign': 'center', 'margin-left':'1%'})
+        dcc.Link('Giriş', href='/', refresh = True,loading_state = {'is_loading': True},style={"color": "white", 'font-size': '200%', 'textAlign': 'center', 'margin-left':'1%'})
               ], className="row"),            
     html.Div([dcc.Markdown('''EMPTY''', style={"color": "rgba(0,0,0,0)", 'textAlign': 'center', 'height' : 250})
               ]),
@@ -108,7 +105,7 @@ app.layout = html.Div([
             
             
             
-        dcc.Tab(label='Profile-1', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+        dcc.Tab(label='Profil-1', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 , 'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
 
                                             
@@ -117,7 +114,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Early Collections Manager View''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''İdari Takip Yöneticisi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -125,12 +122,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Region    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Bölge    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Bölge_Filtresi',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Region',
+                                                             placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -141,12 +138,12 @@ app.layout = html.Div([
 
 
 
-                                                html.Div([html.I('Loan Type    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Kredi Türü    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Kredi Türü_Filtresi',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Loan Type',
+                                                             placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -158,10 +155,10 @@ app.layout = html.Div([
                                     
                                                 html.Div([html.I('Segment    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Segment_Filtresi',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Segment'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Segment'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Segment',
+                                                             placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -169,12 +166,12 @@ app.layout = html.Div([
                                     
                                     
                                     
-                                                html.Div([html.I('Branch    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Şube_Filtresi',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Branch',
+                                                             placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -189,9 +186,9 @@ app.layout = html.Div([
                         html.Div([ 
 
                                             html.Div([          
-                                                                html.Div([html.H1('Monthly NPL Inflow', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_01_apple')]),
-                                                                html.Div([html.H1('Yearly NPL Inflow', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_01_orange')])
                                                                 
                                                 ], className="four columns"),
@@ -217,7 +214,7 @@ app.layout = html.Div([
                          html.Div([
                         html.Div(
                                     [
-                                        html.Span('''Roll Rates''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
+                                        html.Span('''Roll Rate Gelişimi''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
 
                                         
                                         
@@ -265,7 +262,7 @@ app.layout = html.Div([
     
     
     ]),
-                dcc.Tab(label='Profile-2', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-2', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 
                         children=[
                     
@@ -275,7 +272,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''NPL Manager View''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Yasal Takip Yöneticisi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -283,12 +280,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Region    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Bölge    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Bölge_Filtresi_tab2',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Region',
+                                                             placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -299,12 +296,12 @@ app.layout = html.Div([
 
 
 
-                                                html.Div([html.I('Loan Type    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Kredi Türü    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Kredi Türü_Filtresi_tab2',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Loan Type',
+                                                             placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -314,12 +311,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Branch    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Şube_Filtresi_tab2',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Branch',
+                                                             placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -327,12 +324,12 @@ app.layout = html.Div([
                                      
                                   
                                     
-                                                html.Div([html.I('Collection Agency    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Tahsilat Ofisi    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Tahsilat_Ofisi_Filtresi_tab2',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Tahsilat Ofisi'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Tahsilat Ofisi'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='TCollection Agency',
+                                                             placeholder='Tahsilat Ofisi Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -349,11 +346,11 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Monthly NPL Recovery', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_02_apple')]),
-                                                                html.Div([html.H1('Yearly NPL Recovery', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_02_orange')]),
-                                                                html.Div([html.H1('12-Months NPL Recovery %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('12. Ay NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_02_banana')])                                                                
                                                 ], className="four columns"),
                                             
@@ -383,7 +380,7 @@ app.layout = html.Div([
     ]),
                                                 
 
-                dcc.Tab(label='Table View', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Tablo', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                                                                 
@@ -392,7 +389,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Distressed Loans''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Sorunlu Krediler''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -400,12 +397,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Region    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Bölge    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Bölge_Filtresi_tab7',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Region',
+                                                             placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -416,12 +413,12 @@ app.layout = html.Div([
 
 
 
-                                                html.Div([html.I('Loan Type    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Kredi Türü    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Kredi Türü_Filtresi_tab7',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Loan Type',
+                                                             placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left':'1%'}),                        
@@ -433,10 +430,10 @@ app.layout = html.Div([
                                     
                                                 html.Div([html.I('Segment    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Segment_Filtresi_tab7',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Segment'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Segment'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Segment',
+                                                             placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -447,12 +444,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Branch    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Şube_Filtresi_tab7',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Şube'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Şube'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Branch',
+                                                             placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -466,7 +463,7 @@ app.layout = html.Div([
                         
                         # ROW-2
                         html.Div([
-                                    html.Span('''Details on Distressed Loans''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'textAlign': 'center','margin-top':'2%','display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px'}),
+                                    html.Span('''Gecikmedeki Kredilere İlişkin Detaylar''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'textAlign': 'center','margin-top':'2%','display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px'}),
                                     html.Div(id='table-output_07_apple',style={'margin-left': '2%','margin-right': '2%','margin-top': '1%'})
                                 ]), 
                         
@@ -477,7 +474,7 @@ app.layout = html.Div([
                  
                                 
                 
-                dcc.Tab(label='Profile-3', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-3', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -489,7 +486,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Regional Manager View''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Bölge Müdürü''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -497,12 +494,12 @@ app.layout = html.Div([
 
 
 
-                                                html.Div([html.I('Branch    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Şube_Filtresi_tab3',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list_3['Şube'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list_3['Şube'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Branch',
+                                                             placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -514,12 +511,12 @@ app.layout = html.Div([
 
 
 
-                                                html.Div([html.I('Loan Type    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Kredi Türü    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Kredi Türü_Filtresi_tab3',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Loan Type',
+                                                             placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -531,10 +528,10 @@ app.layout = html.Div([
                                     
                                                  html.Div([html.I('Segment    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Segment_Filtresi_tab3',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_3['Segment'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_3['Segment'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Segment',
+                                                             placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -547,12 +544,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Month    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Ay    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Ay_Filtresi_tab3',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Month',
+                                                             placeholder='Ay Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -567,9 +564,9 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Yearly NPL Inflow', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_03_apple')]),
-                                                                html.Div([html.H1('Yearly NPL Recovery', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_03_orange')]),
 
                                                 ], className="four columns"),
@@ -599,7 +596,7 @@ app.layout = html.Div([
                          html.Div([
                         html.Div(
                                     [
-                                        html.Span('''Roll Rates''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
+                                        html.Span('''Roll Rate Gelişimi''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
 
                                         
                                         
@@ -648,7 +645,7 @@ app.layout = html.Div([
                     
                     
     ]),
-                dcc.Tab(label='Profile-4', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-4', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
         
               
@@ -657,19 +654,19 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Branch Manager View''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Şube Müdürü''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'100%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'six columns'),
                                     
                                     
 
 
 
-                                                html.Div([html.I('Loan Type    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Kredi Türü    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Kredi Türü_Filtresi_tab4',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Loan Type',
+                                                             placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '5%'}),                        
@@ -681,10 +678,10 @@ app.layout = html.Div([
                                     
                                                  html.Div([html.I('Segment    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Segment_Filtresi_tab4',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_3['Segment'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df_3['Segment'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Segment',
+                                                             placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -697,12 +694,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Month    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Ay    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Ay_Filtresi_tab4',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Ay'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Month',
+                                                             placeholder='Ay Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -717,9 +714,9 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Yearly NPL Inflow', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Yıllık NPL Aktarımı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_04_apple')]),
-                                                                html.Div([html.H1('Yearly NPL Recovery', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_04_orange')]),
                                                                 
 
@@ -748,7 +745,7 @@ app.layout = html.Div([
                          html.Div([
                         html.Div(
                                     [
-                                        html.Span('''Roll Rates''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
+                                        html.Span('''Roll Rate Gelişimi''', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'width':'100%', 'height' : 10 ,'margin-top':0, 'margin-left':0 ,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' , 'font-style': 'italic', 'border-bottom': '10px', 'textAlign': 'center'})
 
                                         
                                         
@@ -801,7 +798,7 @@ app.layout = html.Div([
                     
     ]),
 
-                dcc.Tab(label='Profile-5', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
+                dcc.Tab(label='Profil-5', style={"color": "white","background": "#5D6D7E", 'textAlign': 'center', 'verticalAlign': 'middle','width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-bottom':0 ,'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},selected_style={"color": "white","background": "#1F1F25", 'textAlign': 'center', 'verticalAlign': 'middle', 'width':'100%', 'height' : 5, 'line-height' : 0 ,'margin-top':0 , 'margin-left' : 0,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '90%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'},
                 children=[
                     
                     
@@ -813,7 +810,7 @@ app.layout = html.Div([
                         html.Div([
                                     html.Div(
                                                 [
-                                                    html.H1('''Collection Agency View''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
+                                                    html.H1('''Tahsilat Ofisi''', style={"color": "white","background": "#5D6D7E", 'textAlign': 'left', 'width':'130%', 'height' : 45 ,'margin-top':10 , 'margin-left' : 30,'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'padding-left':'0%', 'justify-content': 'center', 'font-style': 'italic'})
                                                 ], className = 'five columns'),
                                     
                                     
@@ -821,12 +818,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Region    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Bölge    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Bölge_Filtresi_tab6',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Bölge'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Region',
+                                                             placeholder='Bölge Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -837,12 +834,12 @@ app.layout = html.Div([
 
 
 
-                                                html.Div([html.I('Loan Type    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Kredi Türü    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Kredi Türü_Filtresi_tab6',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Kredi Türü'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Loan Type',
+                                                             placeholder='Kredi Türü Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -854,10 +851,10 @@ app.layout = html.Div([
                                     
                                                 html.Div([html.I('Segment    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Segment_Filtresi_tab6',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Segment'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in df['Segment'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Segment',
+                                                             placeholder='Segment Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -868,12 +865,12 @@ app.layout = html.Div([
 
                                   
                                     
-                                                html.Div([html.I('Branch    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
+                                                html.Div([html.I('Şube    :',style={"background": "rgba(0,0,0,0)", 'color':'white', 'font-family': "Calibri", 'font-size': '100%'}),
                                                           dcc.Dropdown(id = 'Şube_Filtresi_tab6',
-                                                             options=[{'label': 'All', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
+                                                             options=[{'label': 'Tümü', 'value': 'All'}] + [{'label': i, 'value': i} for i in sube_list['Şube'].unique()], 
                                                              value= 'All',
                                                              multi=False,
-                                                             placeholder='Branch',
+                                                             placeholder='Şube Seçiniz',
                                                              style={'width': '100%','margin-top':0, 'background': 'white)', 'color': '#5D6D7E', 'font-family': "Calibri", 'font-size': '90%'}
                                                              )
                                             ], className="two columns", style={'font-family': "Calibri" , 'font-size': '100%' ,'justify-content': 'center', 'font-style': 'italic', 'background': '#5D6D7E', 'color': 'white', 'margin-left': '1%'}),                        
@@ -892,11 +889,11 @@ app.layout = html.Div([
                         html.Div([
 
                                             html.Div([          
-                                                                html.Div([html.H1('Monthly NPL Recovery', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
+                                                                html.Div([html.H1('Aylık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),  
                                                                 html.Div([html.Div(id='card-output_06_apple')]),
-                                                                html.Div([html.H1('Yearly NPL Recovery', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('Yıllık NPL Tahsilatı', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_orange')]),
-                                                                html.Div([html.H1('NPL Recovery %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
+                                                                html.Div([html.H1('NPL Tahsilat %', style={"color": "#5D6D7E","background": "rgba(0,0,0,0)", 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '150%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '0%', 'margin-left': '25%'})]),
                                                                 html.Div([html.Div(id='card-output_06_banana')])                                                                
                                                 ], className="four columns"),
                                             
@@ -1525,12 +1522,12 @@ def update_value(input_1, input_2, input_3, input_4):
     
     
     #card-output_01_apple
-    return html.H1('$'+str(last_month_NPL)+' M', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+    return html.H1(str(last_month_NPL)+'  m TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
     
     
 
     #card-output_01_orange          
-          ),html.H1('$'+str(total_NPL)+'  M', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+          ),html.H1(str(total_NPL)+'  m TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
    
 
                     
@@ -1546,7 +1543,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 600,
-                                                    'title': ' NPL Inflow % by Region', 
+                                                    'title': ' Bölge Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1573,7 +1570,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 600,
-                                                    'title': ' Monthly NPL Inflow Trend (Million $)', 
+                                                    'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1597,7 +1594,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 600,
-                                                    'title': ' NPL Inflow % by Branch (Top 5)', 
+                                                    'title': ' Şube Bazında Aylık NPL Aktarım Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1622,7 +1619,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 600,
-                                                    'title': ' Outstanding Loans Trend (Million $)', 
+                                                    'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1645,7 +1642,7 @@ def update_value(input_1, input_2, input_3, input_4):
                             df_2_kredi_türü, 
                             x="Kredi Türü", 
                             y="NPL",  
-                            title=" NPL Inflow by Loan Type (Million $)", 
+                            title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
                             height = 225,
                             #width = 475,
                             text = 'NPL'
@@ -1772,7 +1769,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 495,
                                                     'width' : 250,
-                                                    'title': ' Montly NPL Inflow %', 
+                                                    'title': ' Aylık NPL Aktarım %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1796,7 +1793,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 600,
-                                                    'title': ' NPL Inflow Rate by Loan Type', 
+                                                    'title': ' Kredi Türü Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -1820,7 +1817,7 @@ def update_value(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 600,
-                                                    'title': ' NPL Inflow Rate by Segment', 
+                                                    'title': ' Segment Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -2057,7 +2054,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
         
         
         
-        df_2_bireysel_kitle = df_2[df_2['Segment'] == 'Retail']
+        df_2_bireysel_kitle = df_2[df_2['Segment'] == 'Bireysel Kitle']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_bireysel_kitle['Tahsilat-1']),sum(df_2_bireysel_kitle['Tahsilat-2']),sum(df_2_bireysel_kitle['Tahsilat-3']),sum(df_2_bireysel_kitle['Tahsilat-4']),sum(df_2_bireysel_kitle['Tahsilat-5']),sum(df_2_bireysel_kitle['Tahsilat-6']),sum(df_2_bireysel_kitle['Tahsilat-7']),sum(df_2_bireysel_kitle['Tahsilat-8']),sum(df_2_bireysel_kitle['Tahsilat-9']),sum(df_2_bireysel_kitle['Tahsilat-10']),sum(df_2_bireysel_kitle['Tahsilat-11']),sum(df_2_bireysel_kitle['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2065,14 +2062,14 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_bireysel_kitle['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Segment'] = 'Retail'  
+        recovery_vintage['Segment'] = 'Bireysel Kitle'  
         df_2_bireysel_kitle = recovery_vintage
         df_2_bireysel_kitle = df_2_bireysel_kitle[(df_2_bireysel_kitle['Ay'] == 3) | (df_2_bireysel_kitle['Ay'] == 6) | (df_2_bireysel_kitle['Ay'] == 9) | (df_2_bireysel_kitle['Ay'] == 12)]
         
         
         
         
-        df_2_bireysel_portfoy = df_2[df_2['Segment'] == 'Premiere']
+        df_2_bireysel_portfoy = df_2[df_2['Segment'] == 'Bireysel Portföy']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_bireysel_portfoy['Tahsilat-1']),sum(df_2_bireysel_portfoy['Tahsilat-2']),sum(df_2_bireysel_portfoy['Tahsilat-3']),sum(df_2_bireysel_portfoy['Tahsilat-4']),sum(df_2_bireysel_portfoy['Tahsilat-5']),sum(df_2_bireysel_portfoy['Tahsilat-6']),sum(df_2_bireysel_portfoy['Tahsilat-7']),sum(df_2_bireysel_portfoy['Tahsilat-8']),sum(df_2_bireysel_portfoy['Tahsilat-9']),sum(df_2_bireysel_portfoy['Tahsilat-10']),sum(df_2_bireysel_portfoy['Tahsilat-11']),sum(df_2_bireysel_portfoy['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2080,13 +2077,13 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_bireysel_portfoy['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Segment'] = 'Premiere'  
+        recovery_vintage['Segment'] = 'Bireysel Portföy'  
         df_2_bireysel_portfoy = recovery_vintage
         df_2_bireysel_portfoy = df_2_bireysel_portfoy[(df_2_bireysel_portfoy['Ay'] == 3) | (df_2_bireysel_portfoy['Ay'] == 6) | (df_2_bireysel_portfoy['Ay'] == 9) | (df_2_bireysel_portfoy['Ay'] == 12)]
         
         
         
-        df_2_ozel_birikim = df_2[df_2['Segment'] == 'Private']
+        df_2_ozel_birikim = df_2[df_2['Segment'] == 'Özel Birikim']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_ozel_birikim['Tahsilat-1']),sum(df_2_ozel_birikim['Tahsilat-2']),sum(df_2_ozel_birikim['Tahsilat-3']),sum(df_2_ozel_birikim['Tahsilat-4']),sum(df_2_ozel_birikim['Tahsilat-5']),sum(df_2_ozel_birikim['Tahsilat-6']),sum(df_2_ozel_birikim['Tahsilat-7']),sum(df_2_ozel_birikim['Tahsilat-8']),sum(df_2_ozel_birikim['Tahsilat-9']),sum(df_2_ozel_birikim['Tahsilat-10']),sum(df_2_ozel_birikim['Tahsilat-11']),sum(df_2_ozel_birikim['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2094,7 +2091,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_ozel_birikim['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Segment'] = 'Private'  
+        recovery_vintage['Segment'] = 'Özel Birikim'  
         df_2_ozel_birikim = recovery_vintage
         df_2_ozel_birikim = df_2_ozel_birikim[(df_2_ozel_birikim['Ay'] == 3) | (df_2_ozel_birikim['Ay'] == 6) | (df_2_ozel_birikim['Ay'] == 9) | (df_2_ozel_birikim['Ay'] == 12)]
         
@@ -2230,7 +2227,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
 
         
         
-        df_2_yapılandırma = df_2[df_2['Kredi Türü'] == 'Restructuring']
+        df_2_yapılandırma = df_2[df_2['Kredi Türü'] == 'Yapılandırma']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_yapılandırma['Tahsilat-1']),sum(df_2_yapılandırma['Tahsilat-2']),sum(df_2_yapılandırma['Tahsilat-3']),sum(df_2_yapılandırma['Tahsilat-4']),sum(df_2_yapılandırma['Tahsilat-5']),sum(df_2_yapılandırma['Tahsilat-6']),sum(df_2_yapılandırma['Tahsilat-7']),sum(df_2_yapılandırma['Tahsilat-8']),sum(df_2_yapılandırma['Tahsilat-9']),sum(df_2_yapılandırma['Tahsilat-10']),sum(df_2_yapılandırma['Tahsilat-11']),sum(df_2_yapılandırma['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2238,14 +2235,14 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_yapılandırma['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Restructured Loans'  
+        recovery_vintage['Kredi Türü'] = 'Yapılandırma'  
         df_2_yapılandırma = recovery_vintage
         df_2_yapılandırma = df_2_yapılandırma[(df_2_yapılandırma['Ay'] == 3) | (df_2_yapılandırma['Ay'] == 6) | (df_2_yapılandırma['Ay'] == 9) | (df_2_yapılandırma['Ay'] == 12)]
                     
         
         
         
-        df_2_kmh = df_2[df_2['Kredi Türü'] == 'Overdraft']
+        df_2_kmh = df_2[df_2['Kredi Türü'] == 'KMH']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kmh['Tahsilat-1']),sum(df_2_kmh['Tahsilat-2']),sum(df_2_kmh['Tahsilat-3']),sum(df_2_kmh['Tahsilat-4']),sum(df_2_kmh['Tahsilat-5']),sum(df_2_kmh['Tahsilat-6']),sum(df_2_kmh['Tahsilat-7']),sum(df_2_kmh['Tahsilat-8']),sum(df_2_kmh['Tahsilat-9']),sum(df_2_kmh['Tahsilat-10']),sum(df_2_kmh['Tahsilat-11']),sum(df_2_kmh['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2253,14 +2250,14 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kmh['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Overdraft'  
+        recovery_vintage['Kredi Türü'] = 'KMH'  
         df_2_kmh = recovery_vintage
         df_2_kmh = df_2_kmh[(df_2_kmh['Ay'] == 3) | (df_2_kmh['Ay'] == 6) | (df_2_kmh['Ay'] == 9) | (df_2_kmh['Ay'] == 12)]
         
         
         
         
-        df_2_kredi_kartı = df_2[df_2['Kredi Türü'] == 'Credit Cards']
+        df_2_kredi_kartı = df_2[df_2['Kredi Türü'] == 'Kredi Kartı']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_kartı['Tahsilat-1']),sum(df_2_kredi_kartı['Tahsilat-2']),sum(df_2_kredi_kartı['Tahsilat-3']),sum(df_2_kredi_kartı['Tahsilat-4']),sum(df_2_kredi_kartı['Tahsilat-5']),sum(df_2_kredi_kartı['Tahsilat-6']),sum(df_2_kredi_kartı['Tahsilat-7']),sum(df_2_kredi_kartı['Tahsilat-8']),sum(df_2_kredi_kartı['Tahsilat-9']),sum(df_2_kredi_kartı['Tahsilat-10']),sum(df_2_kredi_kartı['Tahsilat-11']),sum(df_2_kredi_kartı['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2268,13 +2265,13 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_kartı['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Credit Cards'  
+        recovery_vintage['Kredi Türü'] = 'Kredi Kartı'  
         df_2_kredi_kartı = recovery_vintage
         df_2_kredi_kartı = df_2_kredi_kartı[(df_2_kredi_kartı['Ay'] == 3) | (df_2_kredi_kartı['Ay'] == 6) | (df_2_kredi_kartı['Ay'] == 9) | (df_2_kredi_kartı['Ay'] == 12)]
         
         
         
-        df_2_kredi_ihtiyac = df_2[df_2['Kredi Türü'] == 'General Purpose']
+        df_2_kredi_ihtiyac = df_2[df_2['Kredi Türü'] == 'İhtiyaç']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_ihtiyac['Tahsilat-1']),sum(df_2_kredi_ihtiyac['Tahsilat-2']),sum(df_2_kredi_ihtiyac['Tahsilat-3']),sum(df_2_kredi_ihtiyac['Tahsilat-4']),sum(df_2_kredi_ihtiyac['Tahsilat-5']),sum(df_2_kredi_ihtiyac['Tahsilat-6']),sum(df_2_kredi_ihtiyac['Tahsilat-7']),sum(df_2_kredi_ihtiyac['Tahsilat-8']),sum(df_2_kredi_ihtiyac['Tahsilat-9']),sum(df_2_kredi_ihtiyac['Tahsilat-10']),sum(df_2_kredi_ihtiyac['Tahsilat-11']),sum(df_2_kredi_ihtiyac['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2282,7 +2279,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_ihtiyac['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'General Purpose'  
+        recovery_vintage['Kredi Türü'] = 'İhtiyaç'  
         df_2_kredi_ihtiyac = recovery_vintage
         df_2_kredi_ihtiyac = df_2_kredi_ihtiyac[(df_2_kredi_ihtiyac['Ay'] == 3) | (df_2_kredi_ihtiyac['Ay'] == 6) | (df_2_kredi_ihtiyac['Ay'] == 9) | (df_2_kredi_ihtiyac['Ay'] == 12)]
         
@@ -2290,7 +2287,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
         
         
         
-        df_2_kredi_tasit = df_2[df_2['Kredi Türü'] == 'Car']
+        df_2_kredi_tasit = df_2[df_2['Kredi Türü'] == 'Taşıt']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_tasit['Tahsilat-1']),sum(df_2_kredi_tasit['Tahsilat-2']),sum(df_2_kredi_tasit['Tahsilat-3']),sum(df_2_kredi_tasit['Tahsilat-4']),sum(df_2_kredi_tasit['Tahsilat-5']),sum(df_2_kredi_tasit['Tahsilat-6']),sum(df_2_kredi_tasit['Tahsilat-7']),sum(df_2_kredi_tasit['Tahsilat-8']),sum(df_2_kredi_tasit['Tahsilat-9']),sum(df_2_kredi_tasit['Tahsilat-10']),sum(df_2_kredi_tasit['Tahsilat-11']),sum(df_2_kredi_tasit['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2298,14 +2295,14 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_tasit['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Car'  
+        recovery_vintage['Kredi Türü'] = 'Taşıt'  
         df_2_kredi_tasit = recovery_vintage
         df_2_kredi_tasit = df_2_kredi_tasit[(df_2_kredi_tasit['Ay'] == 3) | (df_2_kredi_tasit['Ay'] == 6) | (df_2_kredi_tasit['Ay'] == 9) | (df_2_kredi_tasit['Ay'] == 12)]
         
         
         
         
-        df_2_kredi_konut = df_2[df_2['Kredi Türü'] == 'Mortgage']
+        df_2_kredi_konut = df_2[df_2['Kredi Türü'] == 'Konut']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_konut['Tahsilat-1']),sum(df_2_kredi_konut['Tahsilat-2']),sum(df_2_kredi_konut['Tahsilat-3']),sum(df_2_kredi_konut['Tahsilat-4']),sum(df_2_kredi_konut['Tahsilat-5']),sum(df_2_kredi_konut['Tahsilat-6']),sum(df_2_kredi_konut['Tahsilat-7']),sum(df_2_kredi_konut['Tahsilat-8']),sum(df_2_kredi_konut['Tahsilat-9']),sum(df_2_kredi_konut['Tahsilat-10']),sum(df_2_kredi_konut['Tahsilat-11']),sum(df_2_kredi_konut['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -2313,7 +2310,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_konut['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Mortgage'  
+        recovery_vintage['Kredi Türü'] = 'Konut'  
         df_2_kredi_konut = recovery_vintage
         df_2_kredi_konut = df_2_kredi_konut[(df_2_kredi_konut['Ay'] == 3) | (df_2_kredi_konut['Ay'] == 6) | (df_2_kredi_konut['Ay'] == 9) | (df_2_kredi_konut['Ay'] == 12)]
         
@@ -2342,12 +2339,12 @@ def update_value_2(input_1, input_2, input_3, input_4):
         
 
         #card-output_02_apple
-        return html.H1('$'+str(last_month_recovery)+'  M', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+        return html.H1(str(last_month_recovery)+'  m TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
         
         
     
         #card-output_02_orange          
-              ),html.H1('$'+str(total_recovery)+'  M', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+              ),html.H1(str(total_recovery)+'  m TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
        
 
 
@@ -2367,7 +2364,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 325,
                                                     #'width' : 700,
-                                                    'title': ' 12 Months NPL Recovery % by Region', 
+                                                    'title': ' Bölge Bazında 12. Ay NPL Tahsilat Oranı (%)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -2391,15 +2388,15 @@ def update_value_2(input_1, input_2, input_3, input_4):
 
                         figure={
                                     'data': [
-                                                {'x': (df_2_segment_recovery_3_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3 Monts', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_segment_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_segment_recovery_6_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6 Monts', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_segment_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_segment_recovery_9_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9 Monts', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_segment_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_segment_recovery_12_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12 Monts', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_segment_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_3_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3. Ay', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_segment_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_6_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6. Ay', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_segment_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_9_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9. Ay', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_segment_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_12_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_segment_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 1100,
-                                                    'title': ' 3-6-9-12 Months NPL Recovery % by Segment', 
+                                                    'title': ' Segment Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -2420,7 +2417,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                             recovery_vintage_all, 
                             x="Ay", 
                             y="Tahsilat%",  
-                            title=" NPL Recovery Vintage Curve", 
+                            title=" NPL Tahsilat Vintage Eğrisi", 
                             height = 275,
                             #width = 600,
                             text = 'Tahsilat%%'
@@ -2430,7 +2427,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                     plot_bgcolor = 'rgba(0,0,0,0)',
                                     margin={"r":40,"t":40,"l":90,"b":70},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
-                                    xaxis = {'title': 'Months After NPL Inflow','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
+                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
                                     ).update_traces(
                                                     hovertemplate = '%{x}. Ay: %{text}',
                                                     textposition ='top center',
@@ -2446,15 +2443,15 @@ def update_value_2(input_1, input_2, input_3, input_4):
 
                         figure={
                                     'data': [
-                                                {'x': (df_2_kredi_turu_recovery_3_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3 Months', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_kredi_turu_recovery_6_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6 Months', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_kredi_turu_recovery_9_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9 Months', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_kredi_turu_recovery_12_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12 Months', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_3_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3. Ay', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_6_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6. Ay', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_9_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9. Ay', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_12_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 1850,
-                                                    'title': ' 3-6-9-12 Months NPL Recovery % by Loan Type', 
+                                                    'title': ' Kredi Türü Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -2478,7 +2475,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 365,
-                                                    'title': {'text':' 12 Months NPL Recovery by Branch (Top 5)','pad':{'l':200}, 'font':{'size':15} },
+                                                    'title': {'text':' Şube Bazında 12. Ay NPL Tahsilat Oranı (İlk 5 Şube)','pad':{'l':200}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -2502,7 +2499,7 @@ def update_value_2(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 250,
                                                     #'width' : 375,
-                                                    'title': {'text':' 12 Months NPL Recovery by Collection Agency','pad':{'l':0}, 'font':{'size':15} },
+                                                    'title': {'text':' Tahsilat Ofisi Bazında' '12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -2591,8 +2588,7 @@ def update_value_table_1(input_1, input_2, input_3, input_4):
     df_table['Bucket-3 (M TL)'] = df_table['Bucket-3 (M TL)'].astype(int)
     df_table['NPL (M TL)'] = df_table['NPL (M TL)'].astype(int)
     df_table = df_table[['Şube', 'Bölge', 'Gecikmesiz (M TL)', 'Bucket-1 (M TL)', 'Bucket-2 (M TL)', 'Bucket-3 (M TL)', 'NPL (M TL)', 'Tier', 'NPL Aktarım %']]
-    df_table.columns = ['Branch', 'Region', 'Current (M $)', 'Bucket-1 (M $)', 'Bucket-2 (M $)', 'Bucket-3 (M $)', 'NPL (M $)', 'Tier', 'NPL Inflow %']
-        
+    
     
     
     return dash_table.DataTable(
@@ -2602,7 +2598,7 @@ def update_value_table_1(input_1, input_2, input_3, input_4):
                 data=df_table.to_dict('records'),
                 style_cell={'textAlign': 'center','fontFamily': 'Calibri', 'color': '#99A3A4', 'font-style': 'italic', 'fontSize': 15,'height': '10px'},
                 style_header={'backgroundColor': '#5D6D7E', 'color': 'white','fontWeight': 'bold'},
-                style_data_conditional=[{'if': {'row_index': 'odd'},'backgroundColor': 'rgba(0, 0, 0, 0)'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 1'},'backgroundColor': color_palette_heatmap_pale_10_descending[0], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 2'},'backgroundColor': color_palette_heatmap_pale_10_descending[1], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 3'},'backgroundColor': color_palette_heatmap_pale_10_descending[2], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 4'},'backgroundColor': color_palette_heatmap_pale_10_descending[3], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 5'},'backgroundColor': color_palette_heatmap_pale_10_descending[4], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 6'},'backgroundColor': color_palette_heatmap_pale_10_descending[5], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 7'},'backgroundColor': color_palette_heatmap_pale_10_descending[6], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 8'},'backgroundColor': color_palette_heatmap_pale_10_descending[7], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 9'},'backgroundColor': color_palette_heatmap_pale_10_descending[8], 'color': 'white'},{'if': {'column_id': 'NPL Inflow %', 'filter_query': '{Tier} eq 10'},'backgroundColor': color_palette_heatmap_pale_10_descending[9], 'color': 'white'}],
+                style_data_conditional=[{'if': {'row_index': 'odd'},'backgroundColor': 'rgba(0, 0, 0, 0)'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 1'},'backgroundColor': color_palette_heatmap_pale_10_descending[0], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 2'},'backgroundColor': color_palette_heatmap_pale_10_descending[1], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 3'},'backgroundColor': color_palette_heatmap_pale_10_descending[2], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 4'},'backgroundColor': color_palette_heatmap_pale_10_descending[3], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 5'},'backgroundColor': color_palette_heatmap_pale_10_descending[4], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 6'},'backgroundColor': color_palette_heatmap_pale_10_descending[5], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 7'},'backgroundColor': color_palette_heatmap_pale_10_descending[6], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 8'},'backgroundColor': color_palette_heatmap_pale_10_descending[7], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 9'},'backgroundColor': color_palette_heatmap_pale_10_descending[8], 'color': 'white'},{'if': {'column_id': 'NPL Aktarım %', 'filter_query': '{Tier} eq 10'},'backgroundColor': color_palette_heatmap_pale_10_descending[9], 'color': 'white'}],
                 style_table={'height' : 785,'maxHeight': 785,'overflowY': 'scroll','width': '100%','minWidth': '100%'},
                 sort_action="native",
                 sort_mode='native',
@@ -3149,12 +3145,12 @@ def update_value_3(input_1, input_2, input_3, input_4):
     
     
     #card-output_03_apple
-    return html.H1('$'+str(total_NPL)+'  M', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+    return html.H1(str(total_NPL)+'  m TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
     
     
 
     #card-output_03_orange          
-          ),html.H1('$'+str(total_recovery)+'  M', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+          ),html.H1(str(total_recovery)+'  m TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
    
 
                     
@@ -3165,7 +3161,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                             df_2_kredi_türü, 
                             x="Kredi Türü", 
                             y="NPL",  
-                            title=" NPL Inflow by Loan Type (Million $)", 
+                            title=" Kredi Türü Bazında NPL Aktarımları (M TL)", 
                             height = 225,
                             #width = 475,
                             text = 'NPL'
@@ -3196,7 +3192,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 800,
-                                                    'title': ' Monthly NPL Inflows (Million $)', 
+                                                    'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3222,7 +3218,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' NPL Inflow % by Branch (Top 5)', 
+                                                    'title': ' Şube Bazında Aylık NPL Aktarım Oranı (İlk 5 Şube)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3246,7 +3242,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 800,
-                                                    'title': ' Outstanding Loans Trend (Million $)', 
+                                                    'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3269,7 +3265,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': {'text':' NPL Recovery % by Branch (Top 5)'},
+                                                    'title': {'text':' Şube Bazında 12. Ay NPL Tahsilat Oranı (İlk 5 Şube)'},
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3388,7 +3384,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 495,
                                                     'width' : 250,
-                                                    'title': ' Monthly NPL Inflow %', 
+                                                    'title': ' Aylık NPL Aktarım %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3409,7 +3405,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                             recovery_vintage_all, 
                             x="Ay", 
                             y="Tahsilat%",  
-                            title=" NPL Recovery Vintage Curve", 
+                            title=" NPL Tahsilat Vintage Eğrisi", 
                             height = 225,
                             #width = 575,
                             text = 'Tahsilat%%'
@@ -3419,7 +3415,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                                     plot_bgcolor = 'rgba(0,0,0,0)',
                                     margin={"r":40,"t":40,"l":20,"b":40},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
-                                    xaxis = {'title': 'Months After NPL Inflow','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
+                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
                                     ).update_traces(
                                                     hovertemplate = '%{x}. Ay: %{text}',
                                                     textposition ='top center',
@@ -3436,7 +3432,7 @@ def update_value_3(input_1, input_2, input_3, input_4):
                             kredi_turu_recovery, 
                             x="Kredi Türü", 
                             y="Recovery",  
-                            title=" NPL Recovery by Loan Type (Million $)", 
+                            title=" Kredi Türü Bazında NPL Tahsilatı (M TL)", 
                             height = 225,
                             #width = 575,
                             text = 'Recovery'
@@ -3907,12 +3903,12 @@ def update_value_4(input_1, input_2, input_3):
     
     
     #card-output_04_apple
-    return html.H1('$'+str(total_NPL)+'  M', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
+    return html.H1(str(total_NPL)+'  m TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}
     
     
 
     #card-output_43_orange          
-          ),html.H1('$'+str(total_recovery)+'  M', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
+          ),html.H1(str(total_recovery)+'  m TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '22%'}                              
    
 
                     
@@ -3924,7 +3920,7 @@ def update_value_4(input_1, input_2, input_3):
                             recovery_vintage_all, 
                             x="Ay", 
                             y="Tahsilat%",  
-                            title=" NPL Recovery Vintage Curve", 
+                            title=" NPL Tahsilat Vintage Eğrisi", 
                             height = 225,
                             #width = 575,
                             text = 'Tahsilat%%'
@@ -3934,7 +3930,7 @@ def update_value_4(input_1, input_2, input_3):
                                     plot_bgcolor = 'rgba(0,0,0,0)',
                                     margin={"r":40,"t":40,"l":20,"b":40},
                                     yaxis = {'title': None,'showgrid' : False, 'showline' : True, 'showticklabels' : False,'tickformat': ',.0%', 'linecolor': '#E5E8E8'},
-                                    xaxis = {'title': 'Months After NPL Inflow','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
+                                    xaxis = {'title': 'Takipte Geçen Süre (Ay)','showgrid' : False, 'showline' : False, 'linecolor': '#99A3A4'}
                                     ).update_traces(
                                                     hovertemplate = '%{x}. Ay: %{text}',
                                                     textposition ='top center',
@@ -3953,7 +3949,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 800,
-                                                    'title': ' Monthly NPL Inflows (Million $)', 
+                                                    'title': ' Aylık NPL Aktarımları (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -3980,7 +3976,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' NPL Recovery by Loan Type (Million $)', 
+                                                    'title': ' Kredi Türü Bazında NPL Tahsilatı (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4005,7 +4001,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 800,
-                                                    'title': ' Outstanding Loans Trend (Million $)', 
+                                                    'title': ' Kredi Plasmanının Gelişimi (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4029,7 +4025,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' NPL Inflow by Loan Type (Million $)', 
+                                                    'title': ' Kredi Türü Bazında NPL Aktarımı (M TL)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4150,7 +4146,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 495,
                                                     'width' : 250,
-                                                    'title': ' Monthly NPL Inflow %', 
+                                                    'title': ' Aylık NPL Aktarım %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4174,7 +4170,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' Monthly NPL Inflow % by Loan Type', 
+                                                    'title': ' Kredi Türü Bazında Aylık NPL Aktarım Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4198,7 +4194,7 @@ def update_value_4(input_1, input_2, input_3):
                                     'layout':   {
                                                     'height' : 225,
                                                     #'width' : 575,
-                                                    'title': ' 12-Months Recovery % by Loan Type', 
+                                                    'title': ' Kredi Türü Bazında 12. Ay NPL Tahsilat Oranı', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4430,7 +4426,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
 
         
         
-        df_2_bireysel_kitle = df_2[df_2['Segment'] == 'Retail']
+        df_2_bireysel_kitle = df_2[df_2['Segment'] == 'Bireysel Kitle']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_bireysel_kitle['Tahsilat-1']),sum(df_2_bireysel_kitle['Tahsilat-2']),sum(df_2_bireysel_kitle['Tahsilat-3']),sum(df_2_bireysel_kitle['Tahsilat-4']),sum(df_2_bireysel_kitle['Tahsilat-5']),sum(df_2_bireysel_kitle['Tahsilat-6']),sum(df_2_bireysel_kitle['Tahsilat-7']),sum(df_2_bireysel_kitle['Tahsilat-8']),sum(df_2_bireysel_kitle['Tahsilat-9']),sum(df_2_bireysel_kitle['Tahsilat-10']),sum(df_2_bireysel_kitle['Tahsilat-11']),sum(df_2_bireysel_kitle['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4438,14 +4434,14 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_bireysel_kitle['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Segment'] = 'Retail'  
+        recovery_vintage['Segment'] = 'Bireysel Kitle'  
         df_2_bireysel_kitle = recovery_vintage
         df_2_bireysel_kitle = df_2_bireysel_kitle[(df_2_bireysel_kitle['Ay'] == 3) | (df_2_bireysel_kitle['Ay'] == 6) | (df_2_bireysel_kitle['Ay'] == 9) | (df_2_bireysel_kitle['Ay'] == 12)]
         
         
         
         
-        df_2_bireysel_portfoy = df_2[df_2['Segment'] == 'Premiere']
+        df_2_bireysel_portfoy = df_2[df_2['Segment'] == 'Bireysel Portföy']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_bireysel_portfoy['Tahsilat-1']),sum(df_2_bireysel_portfoy['Tahsilat-2']),sum(df_2_bireysel_portfoy['Tahsilat-3']),sum(df_2_bireysel_portfoy['Tahsilat-4']),sum(df_2_bireysel_portfoy['Tahsilat-5']),sum(df_2_bireysel_portfoy['Tahsilat-6']),sum(df_2_bireysel_portfoy['Tahsilat-7']),sum(df_2_bireysel_portfoy['Tahsilat-8']),sum(df_2_bireysel_portfoy['Tahsilat-9']),sum(df_2_bireysel_portfoy['Tahsilat-10']),sum(df_2_bireysel_portfoy['Tahsilat-11']),sum(df_2_bireysel_portfoy['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4453,13 +4449,13 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_bireysel_portfoy['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Segment'] = 'Premiere'  
+        recovery_vintage['Segment'] = 'Bireysel Portföy'  
         df_2_bireysel_portfoy = recovery_vintage
         df_2_bireysel_portfoy = df_2_bireysel_portfoy[(df_2_bireysel_portfoy['Ay'] == 3) | (df_2_bireysel_portfoy['Ay'] == 6) | (df_2_bireysel_portfoy['Ay'] == 9) | (df_2_bireysel_portfoy['Ay'] == 12)]
         
         
         
-        df_2_ozel_birikim = df_2[df_2['Segment'] == 'Private']
+        df_2_ozel_birikim = df_2[df_2['Segment'] == 'Özel Birikim']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_ozel_birikim['Tahsilat-1']),sum(df_2_ozel_birikim['Tahsilat-2']),sum(df_2_ozel_birikim['Tahsilat-3']),sum(df_2_ozel_birikim['Tahsilat-4']),sum(df_2_ozel_birikim['Tahsilat-5']),sum(df_2_ozel_birikim['Tahsilat-6']),sum(df_2_ozel_birikim['Tahsilat-7']),sum(df_2_ozel_birikim['Tahsilat-8']),sum(df_2_ozel_birikim['Tahsilat-9']),sum(df_2_ozel_birikim['Tahsilat-10']),sum(df_2_ozel_birikim['Tahsilat-11']),sum(df_2_ozel_birikim['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4467,7 +4463,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_ozel_birikim['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Segment'] = 'Recovery'  
+        recovery_vintage['Segment'] = 'Özel Birikim'  
         df_2_ozel_birikim = recovery_vintage
         df_2_ozel_birikim = df_2_ozel_birikim[(df_2_ozel_birikim['Ay'] == 3) | (df_2_ozel_birikim['Ay'] == 6) | (df_2_ozel_birikim['Ay'] == 9) | (df_2_ozel_birikim['Ay'] == 12)]
         
@@ -4611,7 +4607,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
 
         
         
-        df_2_yapılandırma = df_2[df_2['Kredi Türü'] == 'Restructuring']
+        df_2_yapılandırma = df_2[df_2['Kredi Türü'] == 'Yapılandırma']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_yapılandırma['Tahsilat-1']),sum(df_2_yapılandırma['Tahsilat-2']),sum(df_2_yapılandırma['Tahsilat-3']),sum(df_2_yapılandırma['Tahsilat-4']),sum(df_2_yapılandırma['Tahsilat-5']),sum(df_2_yapılandırma['Tahsilat-6']),sum(df_2_yapılandırma['Tahsilat-7']),sum(df_2_yapılandırma['Tahsilat-8']),sum(df_2_yapılandırma['Tahsilat-9']),sum(df_2_yapılandırma['Tahsilat-10']),sum(df_2_yapılandırma['Tahsilat-11']),sum(df_2_yapılandırma['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4619,14 +4615,14 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_yapılandırma['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Restructured Loans'  
+        recovery_vintage['Kredi Türü'] = 'Yapılandırma'  
         df_2_yapılandırma = recovery_vintage
         df_2_yapılandırma = df_2_yapılandırma[(df_2_yapılandırma['Ay'] == 3) | (df_2_yapılandırma['Ay'] == 6) | (df_2_yapılandırma['Ay'] == 9) | (df_2_yapılandırma['Ay'] == 12)]
                     
         
         
         
-        df_2_kmh = df_2[df_2['Kredi Türü'] == 'Overdraft']
+        df_2_kmh = df_2[df_2['Kredi Türü'] == 'KMH']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kmh['Tahsilat-1']),sum(df_2_kmh['Tahsilat-2']),sum(df_2_kmh['Tahsilat-3']),sum(df_2_kmh['Tahsilat-4']),sum(df_2_kmh['Tahsilat-5']),sum(df_2_kmh['Tahsilat-6']),sum(df_2_kmh['Tahsilat-7']),sum(df_2_kmh['Tahsilat-8']),sum(df_2_kmh['Tahsilat-9']),sum(df_2_kmh['Tahsilat-10']),sum(df_2_kmh['Tahsilat-11']),sum(df_2_kmh['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4634,14 +4630,14 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kmh['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Overdraft'  
+        recovery_vintage['Kredi Türü'] = 'KMH'  
         df_2_kmh = recovery_vintage
         df_2_kmh = df_2_kmh[(df_2_kmh['Ay'] == 3) | (df_2_kmh['Ay'] == 6) | (df_2_kmh['Ay'] == 9) | (df_2_kmh['Ay'] == 12)]
         
         
         
         
-        df_2_kredi_kartı = df_2[df_2['Kredi Türü'] == 'Credit Cards']
+        df_2_kredi_kartı = df_2[df_2['Kredi Türü'] == 'Kredi Kartı']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_kartı['Tahsilat-1']),sum(df_2_kredi_kartı['Tahsilat-2']),sum(df_2_kredi_kartı['Tahsilat-3']),sum(df_2_kredi_kartı['Tahsilat-4']),sum(df_2_kredi_kartı['Tahsilat-5']),sum(df_2_kredi_kartı['Tahsilat-6']),sum(df_2_kredi_kartı['Tahsilat-7']),sum(df_2_kredi_kartı['Tahsilat-8']),sum(df_2_kredi_kartı['Tahsilat-9']),sum(df_2_kredi_kartı['Tahsilat-10']),sum(df_2_kredi_kartı['Tahsilat-11']),sum(df_2_kredi_kartı['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4649,13 +4645,13 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_kartı['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Credit Cards'  
+        recovery_vintage['Kredi Türü'] = 'Kredi Kartı'  
         df_2_kredi_kartı = recovery_vintage
         df_2_kredi_kartı = df_2_kredi_kartı[(df_2_kredi_kartı['Ay'] == 3) | (df_2_kredi_kartı['Ay'] == 6) | (df_2_kredi_kartı['Ay'] == 9) | (df_2_kredi_kartı['Ay'] == 12)]
         
         
         
-        df_2_kredi_ihtiyac = df_2[df_2['Kredi Türü'] == 'General Purpose']
+        df_2_kredi_ihtiyac = df_2[df_2['Kredi Türü'] == 'İhtiyaç']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_ihtiyac['Tahsilat-1']),sum(df_2_kredi_ihtiyac['Tahsilat-2']),sum(df_2_kredi_ihtiyac['Tahsilat-3']),sum(df_2_kredi_ihtiyac['Tahsilat-4']),sum(df_2_kredi_ihtiyac['Tahsilat-5']),sum(df_2_kredi_ihtiyac['Tahsilat-6']),sum(df_2_kredi_ihtiyac['Tahsilat-7']),sum(df_2_kredi_ihtiyac['Tahsilat-8']),sum(df_2_kredi_ihtiyac['Tahsilat-9']),sum(df_2_kredi_ihtiyac['Tahsilat-10']),sum(df_2_kredi_ihtiyac['Tahsilat-11']),sum(df_2_kredi_ihtiyac['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4663,7 +4659,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_ihtiyac['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'General Purpose'  
+        recovery_vintage['Kredi Türü'] = 'İhtiyaç'  
         df_2_kredi_ihtiyac = recovery_vintage
         df_2_kredi_ihtiyac = df_2_kredi_ihtiyac[(df_2_kredi_ihtiyac['Ay'] == 3) | (df_2_kredi_ihtiyac['Ay'] == 6) | (df_2_kredi_ihtiyac['Ay'] == 9) | (df_2_kredi_ihtiyac['Ay'] == 12)]
         
@@ -4671,7 +4667,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
         
         
         
-        df_2_kredi_tasit = df_2[df_2['Kredi Türü'] == 'Car']
+        df_2_kredi_tasit = df_2[df_2['Kredi Türü'] == 'Taşıt']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_tasit['Tahsilat-1']),sum(df_2_kredi_tasit['Tahsilat-2']),sum(df_2_kredi_tasit['Tahsilat-3']),sum(df_2_kredi_tasit['Tahsilat-4']),sum(df_2_kredi_tasit['Tahsilat-5']),sum(df_2_kredi_tasit['Tahsilat-6']),sum(df_2_kredi_tasit['Tahsilat-7']),sum(df_2_kredi_tasit['Tahsilat-8']),sum(df_2_kredi_tasit['Tahsilat-9']),sum(df_2_kredi_tasit['Tahsilat-10']),sum(df_2_kredi_tasit['Tahsilat-11']),sum(df_2_kredi_tasit['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4679,14 +4675,14 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_tasit['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Car'  
+        recovery_vintage['Kredi Türü'] = 'Taşıt'  
         df_2_kredi_tasit = recovery_vintage
         df_2_kredi_tasit = df_2_kredi_tasit[(df_2_kredi_tasit['Ay'] == 3) | (df_2_kredi_tasit['Ay'] == 6) | (df_2_kredi_tasit['Ay'] == 9) | (df_2_kredi_tasit['Ay'] == 12)]
         
         
         
         
-        df_2_kredi_konut = df_2[df_2['Kredi Türü'] == 'Mortgage']
+        df_2_kredi_konut = df_2[df_2['Kredi Türü'] == 'Konut']
         recovery_vintage_ay = list(range(0,13))
         recovery_vintage_tahsilat = [0,sum(df_2_kredi_konut['Tahsilat-1']),sum(df_2_kredi_konut['Tahsilat-2']),sum(df_2_kredi_konut['Tahsilat-3']),sum(df_2_kredi_konut['Tahsilat-4']),sum(df_2_kredi_konut['Tahsilat-5']),sum(df_2_kredi_konut['Tahsilat-6']),sum(df_2_kredi_konut['Tahsilat-7']),sum(df_2_kredi_konut['Tahsilat-8']),sum(df_2_kredi_konut['Tahsilat-9']),sum(df_2_kredi_konut['Tahsilat-10']),sum(df_2_kredi_konut['Tahsilat-11']),sum(df_2_kredi_konut['Tahsilat-12'])]
         recovery_vintage_ay = pd.DataFrame(recovery_vintage_ay, columns = ['Ay'])
@@ -4694,7 +4690,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
         recovery_vintage = pd.concat([recovery_vintage_ay, recovery_vintage_tahsilat], axis=1)
         recovery_vintage['Tahsilat%'] = recovery_vintage['Tahsilat'] / sum(df_2_kredi_konut['NPL'])
         recovery_vintage['Tahsilat%%']= ((recovery_vintage['Tahsilat%'] * 100).round(1)).astype(str) + '%'
-        recovery_vintage['Kredi Türü'] = 'Mortgage'  
+        recovery_vintage['Kredi Türü'] = 'Konut'  
         df_2_kredi_konut = recovery_vintage
         df_2_kredi_konut = df_2_kredi_konut[(df_2_kredi_konut['Ay'] == 3) | (df_2_kredi_konut['Ay'] == 6) | (df_2_kredi_konut['Ay'] == 9) | (df_2_kredi_konut['Ay'] == 12)]
         
@@ -4723,12 +4719,12 @@ def update_value_6(input_1, input_2, input_3, input_4):
         
 
         #card-output_06_apple
-        return html.H1('$'+str(last_month_recovery)+'  M', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
+        return html.H1(str(last_month_recovery)+'  m TL', style={"color": "white","background": color_palette_blue[3], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}
         
         
     
         #card-output_06_orange          
-              ),html.H1('$'+str(total_recovery)+'  M', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
+              ),html.H1(str(total_recovery)+'  m TL', style={"color": "white","background": color_palette_blue[1], 'textAlign': 'center', 'width':'75%', 'display': 'inline-block', 'font-family': "Calibri" , 'font-size': '250%' ,'justify-content': 'center', 'font-style': 'italic', 'margin-top': '-20%', 'margin-left': '25%'}                              
        
 
 
@@ -4749,7 +4745,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 250,
                                                     #'width' : 550,
-                                                    'title': {'text':' 12-Months NPL Recovery by Collection Agency (%)','pad':{'l':0}, 'font':{'size':15} },
+                                                    'title': {'text':' Tahsilat Ofisi 12. Ay NPL Tahsilat Oranı (%)','pad':{'l':0}, 'font':{'size':15} },
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4771,15 +4767,15 @@ def update_value_6(input_1, input_2, input_3, input_4):
                         
                         figure={
                                     'data': [
-                                                {'x': (df_2_segment_recovery_3_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3 Months', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_segment_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_segment_recovery_6_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6 Months', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_segment_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_segment_recovery_9_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9 Months', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_segment_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_segment_recovery_12_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12 Months', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_segment_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_3_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3. Ay', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_segment_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_6_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6. Ay', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_segment_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_9_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9. Ay', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_segment_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_segment_recovery_12_ay_tahsilat['Segment'].values.tolist()), 'y': (df_2_segment_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_segment_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 1100,
-                                                    'title': ' 3-6-9-12 Months NPL Recovery % by Segment', 
+                                                    'title': ' Segment Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4803,7 +4799,7 @@ def update_value_6(input_1, input_2, input_3, input_4):
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 750,
-                                                    'title': ' NPL Recovery % by Region', 
+                                                    'title': ' Bölge Bazında 12. Ay NPL Tahsilat Oranı (%)', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
@@ -4823,15 +4819,15 @@ def update_value_6(input_1, input_2, input_3, input_4):
                         
                         figure={
                                     'data': [
-                                                {'x': (df_2_kredi_turu_recovery_3_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3-Months', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_kredi_turu_recovery_6_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6-Months', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_kredi_turu_recovery_9_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9-Months', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
-                                                {'x': (df_2_kredi_turu_recovery_12_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12-Months', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_3_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '3. Ay', 'marker' : {'color': color_palette_blue[0]},'text' : df_2_kredi_turu_recovery_3_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_6_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '6. Ay', 'marker' : {'color': color_palette_blue[1]},'text' : df_2_kredi_turu_recovery_6_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_9_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '9. Ay', 'marker' : {'color': color_palette_blue[2]},'text' : df_2_kredi_turu_recovery_9_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
+                                                {'x': (df_2_kredi_turu_recovery_12_ay_tahsilat['Kredi Türü'].values.tolist()), 'y': (df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%'].values.tolist()), 'type': 'bar', 'name': '12. Ay', 'marker' : {'color': color_palette_blue[3]},'text' : df_2_kredi_turu_recovery_12_ay_tahsilat['Tahsilat%%'],'textposition':'auto', 'textfont':{'color':'white'},'hoverinfo' : 'name+text'},
                                             ],
                                     'layout':   {
                                                     'height' : 275,
                                                     #'width' : 1850,
-                                                    'title': ' 3-6-9-12 Months NPL Recovery % by Loan Type', 
+                                                    'title': ' Kredi Türü Bazında İlk 3-6-9-12 Ay NPL Tahsilat %', 
                                                     'plot_bgcolor': 'rgba(0,0,0,0)' ,
                                                     'paper_bgcolor': 'rgba(0,0,0,0)',
                                                     'font': {'color': '#5D6D7E'},
